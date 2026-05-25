@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   View, Text, ScrollView, TouchableOpacity, StyleSheet, StatusBar,
 } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
+import * as Speech from 'expo-speech'
 
 const C = {
   fondo:   '#0f172a',
@@ -146,12 +147,51 @@ const PREGUNTAS: Pregunta[] = [
   },
 ]
 
+function buildTexto(p: Pregunta): string {
+  const partes: string[] = [p.pregunta, '. ', p.intro]
+  p.puntos.forEach((pt, i) => {
+    partes.push(` Punto ${i + 1}: ${pt.titulo}. ${pt.texto}`)
+    if (pt.cita) {
+      // quitar el guión de referencia (— Libro X:Y) para que suene natural
+      const soloTexto = pt.cita.split('\n')[0].replace(/[«»]/g, '')
+      partes.push(` ${soloTexto}`)
+    }
+  })
+  partes.push(` En resumen: ${p.conclusion}`)
+  return partes.join('')
+}
+
 export default function PreguntasScreen() {
   const nav    = useNavigation<any>()
   const insets = useSafeAreaInsets()
   const [abierto, setAbierto] = useState<string | null>(null)
+  const [leyendo, setLeyendo] = useState<string | null>(null)
 
-  const toggle = (id: string) => setAbierto(prev => (prev === id ? null : id))
+  useEffect(() => () => { Speech.stop() }, [])
+
+  const toggle = (id: string) => {
+    if (abierto === id) {
+      Speech.stop()
+      setLeyendo(null)
+    }
+    setAbierto(prev => (prev === id ? null : id))
+  }
+
+  const escuchar = (p: Pregunta) => {
+    if (leyendo === p.id) {
+      Speech.stop()
+      setLeyendo(null)
+      return
+    }
+    Speech.stop()
+    setLeyendo(p.id)
+    Speech.speak(buildTexto(p), {
+      language: 'es-ES',
+      rate: 0.9,
+      onDone:  () => setLeyendo(null),
+      onError: () => setLeyendo(null),
+    })
+  }
 
   return (
     <View style={s.container}>
@@ -185,6 +225,18 @@ export default function PreguntasScreen() {
               {estaAbierto && (
                 <View style={s.respuesta}>
                   <View style={s.separador} />
+
+                  {/* Botón audio */}
+                  <TouchableOpacity
+                    style={[s.audioBtn, leyendo === p.id && s.audioBtnActivo]}
+                    onPress={() => escuchar(p)}
+                    activeOpacity={0.8}
+                  >
+                    <Text style={s.audioBtnIcon}>{leyendo === p.id ? '⏹' : '🔊'}</Text>
+                    <Text style={[s.audioBtnTxt, leyendo === p.id && s.audioBtnTxtActivo]}>
+                      {leyendo === p.id ? 'Detener audio' : 'Escuchar respuesta'}
+                    </Text>
+                  </TouchableOpacity>
 
                   {/* Intro */}
                   <Text style={s.introTxt}>{p.intro}</Text>
@@ -237,6 +289,11 @@ const s = StyleSheet.create({
 
   respuesta:      { paddingHorizontal: 16, paddingBottom: 16 },
   separador:      { height: 1, backgroundColor: C.borde, marginBottom: 14 },
+  audioBtn:       { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: '#0f2d1a', borderRadius: 10, paddingVertical: 10, paddingHorizontal: 14, marginBottom: 14, borderWidth: 1, borderColor: '#166534' },
+  audioBtnActivo: { backgroundColor: '#1a0a0a', borderColor: '#991b1b' },
+  audioBtnIcon:   { fontSize: 16 },
+  audioBtnTxt:    { color: '#4ade80', fontSize: 14, fontWeight: '600' },
+  audioBtnTxtActivo: { color: '#f87171' },
   introTxt:       { color: C.sub, fontSize: 14, lineHeight: 21, marginBottom: 16, fontStyle: 'italic' },
 
   punto:          { marginBottom: 16 },
