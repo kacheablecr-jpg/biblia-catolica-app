@@ -13,7 +13,7 @@ const COLORES = { fondo: '#0f172a', card: '#1e293b', texto: '#f1f5f9', subTexto:
 const BASE_URL = 'https://pos-one-backend.onrender.com/api/biblia-app'
 const PAGINA_URL = 'https://pos-one-backend.onrender.com/biblia'
 const INSTALL_KEY = 'biblia_install_registered'
-const CURRENT_VERSION = 'v1.4.1'
+const CURRENT_VERSION = 'v1.4.2'
 const GITHUB_RELEASES_API = 'https://api.github.com/repos/kacheablecr-jpg/biblia-katolica-app/releases/latest'
 const DOWNLOAD_URL = 'https://github.com/kacheablecr-jpg/biblia-katolica-app/releases/latest/download/palabra-viva.apk'
 
@@ -152,6 +152,15 @@ export default function HomeScreen() {
               )}
             </View>
 
+            {/* Oración de iluminación */}
+            <View style={s.oracionBox}>
+              <Text style={s.oracionTitulo}>🙏 Antes de leer, haz esta oración</Text>
+              <Text style={s.oracionTexto}>
+                {"\"Señor, abre mis ojos para que contemple las maravillas de tu Palabra.\nIlumina mi mente y mi corazón para entender lo que voy a leer,\ny que tu verdad guíe mis pasos hoy. Amén.\""}
+              </Text>
+              <Text style={s.oracionCita}>— Salmo 119:18</Text>
+            </View>
+
             {/* Continuar lectura */}
             {(progreso.lectura || progreso.audio) && (
               <View style={s.progresoBox}>
@@ -275,6 +284,10 @@ const s = StyleSheet.create({
   rutaBtnSub:      { color: '#a5b4fc', fontSize: 12, marginTop: 2 },
   rutaBtnFlecha:   { color: COLORES.acento, fontSize: 24 },
   emocionBtn:      { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#0c2a2a', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#134e4a' },
+  oracionBox:       { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#1c1a0f', borderRadius: 16, padding: 18, borderWidth: 1, borderColor: '#78350f' },
+  oracionTitulo:    { color: '#fbbf24', fontSize: 13, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 },
+  oracionTexto:     { color: '#fef3c7', fontSize: 15, lineHeight: 24, fontStyle: 'italic', textAlign: 'center' },
+  oracionCita:      { color: '#f59e0b', fontSize: 12, textAlign: 'right', marginTop: 10 },
   preguntasBtn:         { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#451a03', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#78350f' },
   preguntasBtnTitulo:   { color: '#fde68a', fontWeight: '700', fontSize: 15 },
   preguntasBtnSub:      { color: '#fbbf24', fontSize: 12, marginTop: 2 },
