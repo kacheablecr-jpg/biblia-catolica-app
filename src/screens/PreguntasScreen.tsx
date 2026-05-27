@@ -31,6 +31,7 @@ interface Pregunta {
   intro:     string
   puntos:    Punto[]
   conclusion:string
+  mensaje:   string
 }
 
 const PREGUNTAS: Pregunta[] = [
@@ -73,6 +74,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'En resumen: Adán y Eva tuvieron decenas de hijos e hijas (Gén 5:4). Las primeras generaciones se emparejaron entre hermanos y primos por necesidad. Con el tiempo la población creció, y Dios luego prohibió esas uniones en la Ley de Moisés. La Biblia no contradice la pregunta — la responde.',
+    mensaje:
+      'Todos somos hijos del mismo Padre. La Biblia no habla de un origen biológico solamente — habla de dignidad compartida. Detrás de esta pregunta está la verdad más profunda del Génesis: no importa la raza, el origen ni la cultura, todos llevamos la misma imagen de Dios. Somos familia.',
   },
   {
     id:        '2',
@@ -103,6 +106,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La fe cristiana ha leído el relato de Jonás tanto como historia real como como signo profético de la resurrección. Jesús lo tomó en serio. Más allá del debate sobre el pez, el mensaje es poderoso: nadie escapa a la misericordia de Dios, y esa misericordia es para todos los pueblos.',
+    mensaje:
+      'Nadie está tan lejos de Dios que no pueda ser encontrado. Jonás huyó, se hundió en el fondo del mar, y Dios lo buscó allí. Si hoy sientes que estás demasiado lejos, demasiado caído o demasiado perdido — el mismo Dios que preparó un pez para Jonás te está buscando a ti.',
   },
   {
     id:        '3',
@@ -144,6 +149,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia tiene un versículo contra los tatuajes (Lev 19:28), pero estaba dirigido a prácticas de idolatría pagana específicas de esa época. En el Nuevo Testamento no hay prohibición explícita. La pregunta cristiana relevante hoy es: ¿glorifica esto a Dios? El contenido, el motivo y la conciencia son lo que más importa.',
+    mensaje:
+      'Dios no está mirando tu piel — está mirando tu corazón. La pregunta que la Biblia nos invita a hacernos no es "¿me condena este tatuaje?" sino "¿con qué propósito vivo mi vida?" Tu cuerpo es templo del Espíritu Santo no por lo que tiene en la piel, sino por Aquel que vive adentro.',
   },
   {
     id:        '4',
@@ -186,6 +193,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia no condena el placer solitario por su nombre, pero sí establece que la sexualidad humana es sagrada y que el dominio propio es parte de la vida cristiana. Lo más relevante no es el acto aislado sino el estado del corazón: ¿hay lujuria hacia otra persona? ¿Hay esclavitud a un hábito que daña? Ahí es donde la enseñanza bíblica aplica con más fuerza.',
+    mensaje:
+      'La pureza no es un logro de fuerza de voluntad — es un camino de gracia. La Biblia no llama al creyente a una vida perfecta por esfuerzo propio, sino a una vida de dependencia honesta de Dios. Donde hay lucha sincera y humilde, hay misericordia. Dios no condena al que lucha — acompaña al que no se rinde.',
   },
   {
     id:        '5',
@@ -221,6 +230,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'El relato del arca puede leerse literalmente o como un evento regional de gran escala. Lo que sí es claro es que el texto no requiere millones de especies modernas — habla de "tipos" de animales. Pero más allá del debate logístico, el mensaje del diluvio es teológico: Dios juzga la maldad, pero preserva al justo y renueva su alianza con la humanidad.',
+    mensaje:
+      'Dios siempre preserva. En medio del juicio más devastador, Noé encontró gracia. El arcoíris no es solo un fenómeno atmosférico — es la firma de un Dios que hace pacto con su creación y no la abandona. En los momentos más oscuros de tu vida, esa misma promesa sigue en pie.',
   },
   {
     id:        '6',
@@ -256,6 +267,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'El texto de Josué 10 proviene de un poema antiguo y está enmarcado en un contexto de milagro divino en batalla. Puede leerse como un evento literal, como lenguaje poético de victoria, o como una intervención natural extraordinaria. Lo que el texto quiere afirmar es claro: Dios peleó por Israel ese día.',
+    mensaje:
+      'Dios pelea por los suyos. No necesitas entender el mecanismo del milagro para confiar en que el Dios que detuvo el tiempo para Josué también puede intervenir en las batallas de tu vida. La pregunta no es "¿cómo lo hizo?" sino "¿sigo creyendo que puede hacerlo?"',
   },
   {
     id:        '7',
@@ -295,6 +308,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'Las edades de los patriarcas son una de las partes más discutidas del Génesis. Pueden leerse literalmente, como símbolos de honor y antigüedad, o como unidades de tiempo diferentes. No existe consenso definitivo. Lo que sí revela el texto es una teología clara: Dios bendice con larga vida, y esa vida va siendo más limitada conforme la humanidad se aleja del Edén.',
+    mensaje:
+      'Nuestra vida es breve, y eso no es una maldición — es una invitación. El Salmo 90 dice: "Enséñanos a contar bien nuestros días, para que nuestro corazón adquiera sabiduría." Matusalén vivió 969 años; la pregunta que Dios nos hace no es cuántos años viviste, sino cómo los viviste.',
   },
   {
     id:        '8',
@@ -329,6 +344,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia y la evolución no son necesariamente contradictorias si se entiende que hablan de cosas diferentes: la Biblia habla del "por qué" y del "quién", la ciencia habla del "cómo". La Iglesia Católica acepta la evolución biológica mientras afirma que Dios es el creador y que el alma humana tiene un origen especial. El conflicto real es entre el ateísmo y la fe, no entre la biología y la Biblia.',
+    mensaje:
+      'Dios no compite con la ciencia — Él es el autor del universo que la ciencia estudia. La fe no teme las preguntas, las abraza. Si el mecanismo de la creación fue la evolución o algo distinto, lo que nunca cambia es esto: fuiste creado con propósito, por un Dios personal, que te conoce por nombre.',
   },
   {
     id:        '9',
@@ -364,6 +381,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia no da una respuesta científica sobre la duración exacta de la creación. El relato del Génesis usa un lenguaje estructurado y poético. Lo que afirma con certeza es que Dios creó todo, que fue bueno, y que el ser humano ocupa un lugar especial en esa creación. El debate sobre los días refleja cuánto más profundo es el texto de lo que parece a primera vista.',
+    mensaje:
+      'Al final del sexto día, Dios miró todo lo que había creado y dijo que era "muy bueno". Tú eres parte de esa creación. No importa cuántos días tomó — lo que importa es que Dios te miró a ti y dijo que eras bueno. Eso no ha cambiado.',
   },
   {
     id:        '10',
@@ -398,6 +417,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'Si Adán y Eva fueron una pareja histórica literal o el nombre colectivo de los primeros humanos en recibir el alma, es algo que el texto bíblico solo no resuelve con certeza. Lo que la fe cristiana no puede abandonar es que el ser humano fue creado a imagen de Dios, que hubo una ruptura real con Él, y que esa ruptura necesitaba ser restaurada por Cristo.',
+    mensaje:
+      'Llevas en ti la imagen de Dios. Ese es el dato más importante de toda la Biblia sobre el ser humano. No importa cómo llegaste al mundo, dónde creciste ni qué has hecho — la imagen de Dios en ti no puede ser borrada. Y Cristo vino a restaurar lo que el pecado intentó romper.',
   },
   {
     id:        '11',
@@ -434,6 +455,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia no prohíbe el alcohol — lo condena cuando lleva a la embriaguez y a la pérdida del dominio propio. Jesús mismo bebió vino. El principio bíblico no es la abstinencia total obligatoria, sino la moderación, el dominio propio y la consideración de cómo nuestra conducta afecta a los demás.',
+    mensaje:
+      'La libertad cristiana no es permiso para todo — es la capacidad de elegir lo que edifica. El dominio propio no es una cadena; es la forma más alta de libertad. Un creyente libre no necesita el vino para alegrarse, porque su alegría viene de una fuente que nunca se agota.',
   },
   {
     id:        '12',
@@ -469,6 +492,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia es clara: la sexualidad fue diseñada para el matrimonio. La "porneia" — toda actividad sexual fuera del matrimonio — es mencionada repetidamente como algo que el creyente debe evitar. No como una regla arbitraria, sino porque el diseño de Dios para la sexualidad humana apunta a algo más profundo: la imagen de un amor de pacto total e incondicional.',
+    mensaje:
+      'La sexualidad no es un tabú ni un instinto que reprimir — es un don sagrado. Dios la diseñó para ser el lenguaje del amor más total: entrega completa, exclusiva y permanente. Cuando la Biblia protege esa frontera, no está quitándote algo — está cuidando algo precioso que a veces nosotros mismos no sabemos valorar.',
   },
   {
     id:        '13',
@@ -505,6 +530,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'Jesús estableció un estándar alto para el matrimonio: fue diseñado para ser permanente. Pero reconoció la realidad del pecado y del corazón duro. Pablo añadió el caso del abandono. Las iglesias interpretan estos textos de diferente manera. Lo que nunca cambia es que Dios diseñó el matrimonio para reflejar su amor de pacto, y que su gracia alcanza a todos los que han fallado.',
+    mensaje:
+      'Dios no abandona a los que han fallado en el matrimonio. La Biblia está llena de personas rotas que fueron restauradas. Si has pasado por el dolor de una separación, Dios no te mira con condena — te mira con el mismo amor con que corrió hacia el hijo pródigo. Su gracia es más grande que tu fracaso más grande.',
   },
   {
     id:        '14',
@@ -539,6 +566,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La existencia histórica de Jesús no es cuestión de debate serio entre los académicos. Fuentes romanas, judías y cristianas del siglo I y II lo confirman. La pregunta que la historia no puede resolver sola es la más importante: quién era realmente y si su resurrección fue real. Esa es la pregunta de fe.',
+    mensaje:
+      'La pregunta más importante no es "¿existió Jesús?" — esa está resuelta. La pregunta que cambia vidas es: "¿quién es Jesús para mí?" La historia lo confirma como persona real. La fe lo reconoce como Señor y Salvador. Esa segunda respuesta es la que Jesús mismo te pregunta hoy.',
   },
   {
     id:        '15',
@@ -574,6 +603,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'Los evangelios mencionan a los "hermanos de Jesús" en varios pasajes. Si eran hermanos biológicos, primos o hijos de un matrimonio previo de José depende de la tradición teológica. La Iglesia Católica y Ortodoxa defienden la virginidad perpetua de María; la mayoría de las iglesias protestantes los consideran hijos de María y José. Ambas posiciones tienen argumentos serios.',
+    mensaje:
+      'Independientemente de si eran primos o hermanos, Jesús vino a hacer de nosotros su familia. Él mismo dijo: "Mi madre y mis hermanos son los que oyen la Palabra de Dios y la ponen en práctica." La familia más importante no es la biológica — es la que se forma alrededor de Él.',
   },
   {
     id:        '16',
@@ -608,6 +639,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'Los cuatro evangelios son cuatro perspectivas complementarias sobre Jesús, no cuatro versiones contradictorias. Cada uno fue escrito para una audiencia específica con un énfasis teológico propio. Sus diferencias son evidencia de independencia y autenticidad — cuatro testigos distintos que coinciden en lo esencial: Jesús vivió, murió y resucitó.',
+    mensaje:
+      'Cuatro personas distintas, cuatro perspectivas diferentes, un solo Señor. Los evangelios nos enseñan que el encuentro con Jesús es personal y único para cada uno. Mateo lo vio de un modo, Juan de otro. ¿Cómo lo has encontrado tú? Esa es la pregunta que los cuatro evangelios te devuelven.',
   },
   {
     id:        '17',
@@ -644,6 +677,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia enseña que al morir, el creyente entra en una comunión con Cristo (el "paraíso" de Lucas 23, el "estar con Cristo" de Pablo). Esto es el estado intermedio. Al final de los tiempos, habrá una resurrección del cuerpo y un juicio. El destino último del creyente no es un alma flotando en el cielo, sino un cuerpo resucitado en la creación renovada de Dios.',
+    mensaje:
+      'La muerte para el creyente no es el final — es una puerta. Pablo lo dijo sin rodeos: "Para mí el vivir es Cristo y el morir es ganancia." Si Jesús venció la muerte, entonces la muerte ya no tiene la última palabra sobre ninguno de los que están en Él. No hay nada que temer del otro lado.',
   },
   {
     id:        '18',
@@ -679,6 +714,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia — y especialmente Jesús — habla del infierno como una realidad seria. Su naturaleza exacta es debatida: ¿fuego literal o metafórico? ¿Eterno o con final? Lo que ninguna posición cristiana seria puede ignorar es la advertencia de Jesús: hay consecuencias eternas de las decisiones de esta vida, y la separación definitiva de Dios es la mayor tragedia posible.',
+    mensaje:
+      'El infierno no fue creado para los seres humanos — fue preparado para el diablo y sus ángeles. Dios no quiere que nadie vaya allí, y por eso envió a su propio Hijo. La advertencia de Jesús sobre el juicio no es para asustar — es para despertar. El mismo Jesús que habló del infierno es el que abrió la puerta del cielo.',
   },
   {
     id:        '19',
@@ -714,6 +751,8 @@ const PREGUNTAS: Pregunta[] = [
     ],
     conclusion:
       'La Biblia nos prohíbe hacer juicios definitivos sobre el destino eterno de personas específicas — eso pertenece únicamente a Dios. Lo que sí nos revela es un Dios cuya misericordia es más grande de lo que podemos imaginar, que conoce cada corazón con perfecta profundidad, y que no quiere que nadie se pierda. La respuesta correcta ante la muerte de un ser querido es confiar en ese Dios, no intentar usurpar su juicio.',
+    mensaje:
+      'Encomienda a tus seres queridos que partieron a la misericordia de Dios. Él los conoce mejor de lo que tú los conoces, y los ama más de lo que tú puedes amarlos. La fe no te pide certezas que no tienes — te pide que descanses en Aquel que sí las tiene. Y ese Dios es bueno.',
   },
 ]
 
@@ -728,6 +767,7 @@ function buildTexto(p: Pregunta): string {
     }
   })
   partes.push(` En resumen: ${p.conclusion}`)
+  partes.push(` El verdadero mensaje: ${p.mensaje}`)
   return partes.join('')
 }
 
@@ -829,6 +869,12 @@ export default function PreguntasScreen() {
                     <Text style={s.conclusionLabel}>💡 En resumen</Text>
                     <Text style={s.conclusionTxt}>{p.conclusion}</Text>
                   </View>
+
+                  {/* Mensaje verdadero */}
+                  <View style={s.mensajeBox}>
+                    <Text style={s.mensajeLabel}>✝ El verdadero mensaje</Text>
+                    <Text style={s.mensajeTxt}>{p.mensaje}</Text>
+                  </View>
                 </View>
               )}
             </View>
@@ -875,6 +921,10 @@ const s = StyleSheet.create({
   conclusionBox:  { backgroundColor: '#1c1412', borderRadius: 12, padding: 14, marginTop: 4, borderWidth: 1, borderColor: C.bgLight },
   conclusionLabel:{ color: C.acento, fontSize: 12, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 },
   conclusionTxt:  { color: C.texto, fontSize: 14, lineHeight: 21 },
+
+  mensajeBox:    { backgroundColor: '#0f172a', borderRadius: 12, padding: 14, marginTop: 10, borderWidth: 1, borderColor: '#4338ca', borderLeftWidth: 4 },
+  mensajeLabel:  { color: '#a5b4fc', fontSize: 12, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 },
+  mensajeTxt:    { color: '#e0e7ff', fontSize: 14, lineHeight: 22, fontStyle: 'italic' },
 
   nota:           { color: C.sub, fontSize: 13, textAlign: 'center', marginTop: 8, marginBottom: 4 },
 })
