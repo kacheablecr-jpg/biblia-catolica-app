@@ -44,7 +44,7 @@ export default function AcercaDeScreen() {
         <View style={s.heroBox}>
           <Text style={s.heroEmoji}>✝</Text>
           <Text style={s.heroTitulo}>Palabra Viva</Text>
-          <Text style={s.heroVersion}>Versión 1.7.0  •  DHH Edición Internacional</Text>
+          <Text style={s.heroVersion}>Versión 1.7.1  •  DHH Edición Internacional</Text>
         </View>
 
         {/* Traducción */}
@@ -87,6 +87,36 @@ export default function AcercaDeScreen() {
           <Text style={[s.cardTexto, { marginTop: 10, color: C.subTexto, fontSize: 12 }]}>
             Los derechos de la traducción DHH pertenecen a las Sociedades Bíblicas Unidas.
             Esta aplicación es de uso personal y no se distribuye comercialmente.
+          </Text>
+        </View>
+
+        {/* Origen del contenido editorial */}
+        <Text style={s.seccion}>✍️  Origen del contenido</Text>
+        <View style={s.card}>
+          <Text style={s.cardTitulo}>¿De dónde viene el contenido de la app?</Text>
+          <Text style={s.cardTexto}>
+            Todo el contenido de esta app proviene de <Text style={s.bold}>dos fuentes</Text>:
+          </Text>
+          <View style={[s.fuenteRow, { marginTop: 14 }]}>
+            <Text style={s.fuenteNumero}>1</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={s.fuenteTitulo}>La Biblia DHH</Text>
+              <Text style={s.fuenteTexto}>
+                El texto bíblico completo (66 libros, 35,887 versículos) está almacenado en el dispositivo en la traducción Dios Habla Hoy de las Sociedades Bíblicas Unidas.
+              </Text>
+            </View>
+          </View>
+          <View style={[s.fuenteRow, { marginTop: 12 }]}>
+            <Text style={s.fuenteNumero}>2</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={s.fuenteTitulo}>Inteligencia Artificial (Claude)</Text>
+              <Text style={s.fuenteTexto}>
+                Todo el contenido editorial — preguntas bíblicas, rutas temáticas, guía emocional y la sección "Busca la Alegría" — fue redactado con asistencia de inteligencia artificial, basándose en teología cristiana, el Catecismo de la Iglesia Católica, escritos de los Padres de la Iglesia y literatura teológica general.
+              </Text>
+            </View>
+          </View>
+          <Text style={[s.cardTexto, { marginTop: 14, color: C.subTexto, fontSize: 12, fontStyle: 'italic' }]}>
+            Este contenido no reemplaza la dirección espiritual de un sacerdote o pastor. Es una herramienta de acercamiento a la Palabra de Dios.
           </Text>
         </View>
 
@@ -136,6 +166,10 @@ const s = StyleSheet.create({
   dcRow:       { gap: 3 },
   dcLibro:     { color: '#c4b5fd', fontSize: 14, fontWeight: '700' },
   dcDesc:      { color: C.subTexto, fontSize: 13, lineHeight: 18 },
+  fuenteRow:   { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
+  fuenteNumero:{ backgroundColor: C.acento, color: '#0f172a', fontWeight: '700', fontSize: 13, width: 24, height: 24, borderRadius: 12, textAlign: 'center', lineHeight: 24 },
+  fuenteTitulo:{ color: C.acento, fontSize: 14, fontWeight: '700', marginBottom: 4 },
+  fuenteTexto: { color: C.texto, fontSize: 13, lineHeight: 20 },
   shareBtn:    { backgroundColor: '#064e3b', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#065f46' },
   shareIcon:   { fontSize: 24 },
   shareTitulo: { color: '#6ee7b7', fontWeight: '700', fontSize: 15 },
