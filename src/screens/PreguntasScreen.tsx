@@ -1178,6 +1178,94 @@ const PREGUNTAS: Pregunta[] = [
     mensaje:
       'Dios perdonó a David cuando confesó en soledad. Jesús perdonó a la mujer en público. El arrepentimiento sincero nunca queda sin respuesta, sin importar dónde ni cómo se haga. Si dudas sobre la confesión, recuerda: lo que importa no es el método — es el corazón que se vuelve a Dios con verdad.',
   },
+  {
+    id:        '30',
+    emoji:     '🛡️',
+    categoria: 'Fe y vida cotidiana',
+    pregunta:  '¿Qué dice la Biblia sobre tener armas para defenderse?',
+    intro:
+      'La Biblia contiene tanto "pon la otra mejilla" como "quien no tenga espada, que compre una". La tensión es real, y resolverla bien depende de entender a quién le habla Jesús en cada texto y qué tipo de situación está describiendo.',
+    puntos: [
+      {
+        titulo: 'Jesús mismo ordenó comprar espadas',
+        texto:
+          'La noche antes de su arresto, Jesús le dijo a sus discípulos que quien no tuviera espada vendiera su manto y comprara una. Cuando le mostraron dos espadas, dijo "basta". No fue una orden de violencia — fue una provisión para un viaje peligroso. Jesús no era un pacifista absoluto que prohibiera toda defensa.',
+        cita: '«El que no tiene espada, venda su capa y compre una.»\n— Lucas 22:36',
+      },
+      {
+        titulo: 'El Antiguo Testamento permite defender el hogar',
+        texto:
+          'La Ley de Moisés deja claro que quien sorprende a un ladrón forzando su casa de noche y lo hiere, no es culpable de homicidio. La protección del hogar y la familia es reconocida como un derecho en la misma Biblia.',
+        cita: '«Si el ladrón fuere hallado forzando una casa... y fuere herido y muriere, el que lo hirió no será culpado de su muerte.»\n— Éxodo 22:2',
+      },
+      {
+        titulo: 'Nehemías — trabajar y estar armado a la vez',
+        texto:
+          'Cuando los enemigos amenazaron a los que reconstruían el muro de Jerusalén, Nehemías no organizó un ayuno en lugar de una defensa — organizó ambas cosas. Los trabajadores tenían una mano en la herramienta y otra en el arma. Fe y prudencia no se contradicen.',
+        cita: '«Cada uno de los que edificaban tenía su espada ceñida a sus lomos mientras edificaba.»\n— Nehemías 4:18',
+      },
+      {
+        titulo: '"Pon la otra mejilla" — ¿qué significa realmente?',
+        texto:
+          'En el Sermón del Monte, Jesús habla de no devolver mal por mal en el contexto de insultos y afrentas personales — no de defensa ante un ataque mortal. La "mejilla" en la cultura judía era un insulto de honor, no una amenaza de muerte. Jesús enseñaba a no buscar venganza personal, no a dejar que maten a tus hijos.',
+        cita: '«Al que te hiera en la mejilla derecha, vuélvele también la otra.»\n— Mateo 5:39',
+      },
+      {
+        titulo: 'La distinción clave: venganza personal vs. protección de inocentes',
+        texto:
+          'La Biblia y la teología moral distinguen con claridad dos cosas distintas: la venganza personal (prohibida — "no os venguéis vosotros mismos", Ro 12:19) y la legítima defensa de uno mismo y de quienes están bajo tu cuidado (permitida). Un padre que defiende a su familia de un agresor no está desobedeciendo a Jesús.',
+        cita: '«No os venguéis vosotros mismos... Mía es la venganza, yo pagaré, dice el Señor.»\n— Romanos 12:19',
+      },
+    ],
+    conclusion:
+      'La Biblia no prohíbe la legítima defensa. Distingue entre la venganza personal — que condena — y la protección de la vida inocente — que permite. El Antiguo Testamento lo reconoce explícitamente, Jesús mandó llevar espadas y Nehemías armó a sus trabajadores. Lo que sí condena es buscar hacer daño por rencor, orgullo o venganza.',
+    mensaje:
+      'Proteger a quien amas no es falta de fe — puede ser un acto de amor. Pero la Biblia también advierte: quien vive por la espada, por la espada morirá. El arma más poderosa que tiene un creyente no es la que carga en la mano, sino la que guarda en el corazón: la confianza en Dios que no paraliza, sino que da sabiduría para actuar.',
+  },
+  {
+    id:        '31',
+    emoji:     '🌏',
+    categoria: 'Misión y testimonio',
+    pregunta:  '¿Quiénes podemos evangelizar y de qué formas?',
+    intro:
+      'Muchos creen que evangelizar es tarea de sacerdotes, pastores o misioneros. La Biblia dice algo muy diferente: la misión de compartir el Evangelio fue dada a todos los creyentes, sin excepción — y hay más formas de hacerlo de lo que parece.',
+    puntos: [
+      {
+        titulo: 'La Gran Comisión — para todos',
+        texto:
+          'Las últimas palabras de Jesús registradas en Mateo no fueron para los apóstoles solamente — fueron para todos los que le siguen. "Id y haced discípulos a todas las naciones" es una orden colectiva. No hay creyente exento de la misión.',
+        cita: '«Id y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, del Hijo y del Espíritu Santo.»\n— Mateo 28:19',
+      },
+      {
+        titulo: 'El evangelio es para toda criatura',
+        texto:
+          'Marcos lo dice con la fórmula más universal posible: "toda criatura". No hay grupo humano excluido, no hay país que no cuente, no hay persona demasiado alejada o demasiado perdida para recibir la Buena Nueva. La pregunta no es "¿a quién puedo evangelizar?" sino "¿a quién tengo cerca?"',
+        cita: '«Id por todo el mundo y predicad el evangelio a toda criatura.»\n— Marcos 16:15',
+      },
+      {
+        titulo: 'La forma más poderosa: tu propia vida',
+        texto:
+          'Pedro enseña que los creyentes deben estar siempre listos para dar razón de la esperanza que hay en ellos — con mansedumbre y respeto. El primer paso no es un sermón sino una vida que genere la pregunta. Cuando alguien te ve y quiere saber qué tienes tú que no tiene él, ya empezó la evangelización.',
+        cita: '«Estad siempre preparados para presentar defensa... de la esperanza que hay en vosotros, pero hacedlo con gentileza y respeto.»\n— 1 Pedro 3:15',
+      },
+      {
+        titulo: 'Las palabras en el momento justo',
+        texto:
+          'Pablo instruye a los colosenses a aprovechar cada oportunidad con quienes están fuera de la fe. Las palabras deben ser "con gracia, sazonadas con sal" — no agresivas ni impuestas, sino sabrosas, pertinentes y personales. El evangelio se comparte mejor en conversación que en discurso.',
+        cita: '«Que vuestras palabras sean siempre con gracia, sazonadas con sal, para que sepáis cómo debéis responder a cada uno.»\n— Colosenses 4:6',
+      },
+      {
+        titulo: 'Hacerse todo para todos — el método de Pablo',
+        texto:
+          'Pablo describe su estrategia misionera con una frase que lo dice todo: "Me he hecho todo para todos." Con judíos como judío, con los débiles como débil. Evangelizar no es imponer tu cultura o tu estilo — es hablar el idioma del otro para que pueda escuchar a Dios. Eso lo puede hacer cualquier creyente en su propio entorno.',
+        cita: '«Me he hecho todo para todos, para que de todos modos salve a algunos.»\n— 1 Corintios 9:22',
+      },
+    ],
+    conclusion:
+      'La evangelización es tarea de todos los bautizados, no solo del clero. Se puede evangelizar con la vida (testimonio), con las palabras (conversación), con el servicio (obras), con la oración (intercesión) y con cualquier medio disponible. El campo es todo el mundo; el método es adaptarse al otro con amor; la fuerza no viene de uno sino del Espíritu Santo.',
+    mensaje:
+      'No necesitas ordenación ni título para evangelizar — necesitas haber encontrado a Cristo y no poder callarlo. El testimonio más poderoso no es el del que sabe más teología, sino el del que dice con convicción: "Yo estaba perdido, y fui encontrado." Esa historia nadie te la puede quitar, y nadie puede decir que no le aplica.',
+  },
 ]
 
 function buildTexto(p: Pregunta): string {
