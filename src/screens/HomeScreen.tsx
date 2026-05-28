@@ -13,7 +13,7 @@ const COLORES = { fondo: '#0f172a', card: '#1e293b', texto: '#f1f5f9', subTexto:
 const BASE_URL = 'https://pos-one-backend.onrender.com/api/biblia-app'
 const PAGINA_URL = 'https://pos-one-backend.onrender.com/biblia'
 const INSTALL_KEY = 'biblia_install_registered'
-const CURRENT_VERSION = 'v1.7.1'
+const CURRENT_VERSION = 'v1.8.0'
 const GITHUB_RELEASES_API = 'https://api.github.com/repos/kacheablecr-jpg/biblia-catolica-app/releases/latest'
 const DOWNLOAD_URL = 'https://github.com/kacheablecr-jpg/biblia-catolica-app/releases/latest/download/palabra-viva.apk'
 
@@ -244,6 +244,16 @@ export default function HomeScreen() {
               <Text style={s.rutaBtnFlecha}>›</Text>
             </TouchableOpacity>
 
+            {/* Mitos de la Biblia */}
+            <TouchableOpacity style={s.mitosBtn} onPress={() => nav.navigate('Mitos')} activeOpacity={0.8}>
+              <Text style={s.rutaBtnIcon}>🔍</Text>
+              <View style={{ flex: 1 }}>
+                <Text style={s.mitosBtnTitulo}>Mitos de la Biblia</Text>
+                <Text style={s.mitosBtnSub}>Lo que la gente cree que dice... y lo que dice</Text>
+              </View>
+              <Text style={s.rutaBtnFlecha}>›</Text>
+            </TouchableOpacity>
+
             {/* Búsqueda */}
             <View style={s.searchBox}>
               <TextInput
@@ -304,6 +314,9 @@ const s = StyleSheet.create({
   preguntasBtn:         { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#451a03', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#78350f' },
   preguntasBtnTitulo:   { color: '#fde68a', fontWeight: '700', fontSize: 15 },
   preguntasBtnSub:      { color: '#fbbf24', fontSize: 12, marginTop: 2 },
+  mitosBtn:             { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#2e1065', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#4c1d95' },
+  mitosBtnTitulo:       { color: '#e9d5ff', fontWeight: '700', fontSize: 15 },
+  mitosBtnSub:          { color: '#c084fc', fontSize: 12, marginTop: 2 },
   acercaBtn:       { marginHorizontal: 16, marginTop: 20, marginBottom: 8, paddingVertical: 14, alignItems: 'center', borderTopWidth: 1, borderColor: COLORES.borde },
   acercaTxt:       { color: COLORES.subTexto, fontSize: 13 },
   emocionBtnTitulo:{ color: '#99f6e4', fontWeight: '700', fontSize: 15 },

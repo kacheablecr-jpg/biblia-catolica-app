@@ -44,7 +44,7 @@ export default function AcercaDeScreen() {
         <View style={s.heroBox}>
           <Text style={s.heroEmoji}>✝</Text>
           <Text style={s.heroTitulo}>Palabra Viva</Text>
-          <Text style={s.heroVersion}>Versión 1.7.1  •  DHH Edición Internacional</Text>
+          <Text style={s.heroVersion}>Versión 1.8.0  •  DHH Edición Internacional</Text>
         </View>
 
         {/* Traducción */}
