@@ -359,6 +359,48 @@ const ALEGRIAS: Alegria[] = [
       '«Den, y se les dará. Se les echará en el regazo una medida llena, apretada, sacudida y desbordante.»\n— Lucas 6:38',
   },
   {
+    id:       '11',
+    emoji:    '✨',
+    titulo:   'La alegría de buscar la santidad',
+    subtitulo:'No es perfección — es orientación hacia Dios',
+    intro:
+      'La santidad suena a algo reservado para monjas y sacerdotes. Pero la Biblia llama a todos los creyentes a ser santos — y resulta que el camino no es tan inalcanzable ni tan complicado como parece.',
+    puntos: [
+      {
+        titulo: '¿Qué significa ser santo?',
+        texto:
+          'La palabra "santo" (hebreo: qadosh, griego: hagios) significa apartado, dedicado a Dios. No significa perfectamente impecable — significa orientado hacia Dios. Un vaso santo no es un vaso sin rayaduras; es un vaso dedicado al servicio sagrado. Esa es la santidad a la que todos somos llamados.',
+        cita: '«Sed santos, porque yo soy santo.»\n— 1 Pedro 1:16',
+      },
+      {
+        titulo: 'La santidad es un proceso, no un momento',
+        texto:
+          'La santificación es la obra de toda una vida. No llegas a ser santo de un día para otro. Creces en santidad decisión a decisión, día a día, caída y levantada. Dios mismo se comprometió a completar esa obra en ti — no depende solo de tu esfuerzo.',
+        cita: '«El que comenzó en vosotros la buena obra la perfeccionará hasta el día de Jesucristo.»\n— Filipenses 1:6',
+      },
+      {
+        titulo: 'Empieza en la mente',
+        texto:
+          'El campo de batalla de la santidad es lo que piensas, lo que consumes, en qué te enfocas. La transformación exterior siempre sigue a la transformación interior. No puedes vivir en santidad con una mente llena de lo que esa misma santidad rechaza.',
+        cita: '«Transformaos por medio de la renovación de vuestro entendimiento, para que comprobéis cuál sea la buena voluntad de Dios.»\n— Romanos 12:2',
+      },
+      {
+        titulo: 'Los medios que Dios da',
+        texto:
+          'La Biblia describe herramientas concretas para crecer en santidad: la oración, la lectura de la Palabra, los sacramentos, la comunidad de fe y el servicio a otros. Ninguna funciona sola — se necesitan todas. La santidad no es un logro solitario; crece en comunidad.',
+        cita: '«No dejando de congregarnos, como algunos tienen por costumbre, sino exhortándonos.»\n— Hebreos 10:25',
+      },
+      {
+        titulo: 'La santidad es amor, no lista de reglas',
+        texto:
+          'Jesús resumió toda la Ley en dos mandamientos: amar a Dios con todo lo que eres, y amar al prójimo como a ti mismo. La santidad no es una lista de cosas prohibidas — es un corazón que ama bien. Cuando amas a Dios sobre todo, las demás cosas se acomodan solas.',
+        cita: '«En estos dos mandamientos se resume toda la Ley y los profetas.»\n— Mateo 22:40',
+      },
+    ],
+    promesa:
+      '«La gracia de Dios se ha manifestado para traer salvación a todos, enseñándonos que... vivamos justa y piadosamente en este mundo presente.»\n— Tito 2:11-12',
+  },
+  {
     id:       '10',
     emoji:    '🌟',
     titulo:   'La alegría de la esperanza',

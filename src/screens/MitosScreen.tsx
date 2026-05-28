@@ -411,6 +411,111 @@ const MITOS: Mito[] = [
       'La fuerza de Sansón no estaba en el cabello — estaba en el pacto con Dios que el cabello representaba. Cuando reveló el secreto y dejó que lo cortaran, quebró ese pacto y Dios se apartó de él. La historia de Sansón no es sobre superpoderes físicos ni sobre cabello mágico — es sobre las consecuencias de traicionar una consagración y la posibilidad de ser restaurado.',
   },
   {
+    id:        '13',
+    emoji:     '🗿',
+    mito:      'Las imágenes en las iglesias católicas son ídolos',
+    veredicto: 'MALENTENDIDO',
+    intro:
+      'Una de las acusaciones más frecuentes al catolicismo es que las imágenes en las iglesias violan el mandamiento de no hacer ídolos. Pero el mismo Dios que dio ese mandamiento también mandó hacer imágenes — y la diferencia entre ambas cosas es teológicamente crucial.',
+    puntos: [
+      {
+        titulo: 'El mandamiento — leído completo',
+        texto:
+          'Éxodo 20:4 dice "No te harás imagen..." pero el versículo siguiente aclara la razón: "No te inclinarás a ellas ni las adorarás." La prohibición no es hacer imágenes — es adorarlas como si fueran dioses. La palabra clave es adorar.',
+        cita: '«No te harás imagen, ni ninguna semejanza... No te inclinarás a ellas, ni las honrarás.»\n— Éxodo 20:4-5',
+      },
+      {
+        titulo: 'El mismo Dios mandó hacer imágenes',
+        texto:
+          'En Éxodo 25, Dios mismo le ordenó a Moisés fabricar dos querubines de oro sobre el arca del pacto — imágenes de seres celestiales. En Números 21, Dios mandó hacer una serpiente de bronce para que el pueblo la mirara y fuera sanado. Si las imágenes fueran intrínsecamente idolátricas, Dios se habría contradicho.',
+        cita: '«Harás dos querubines de oro... y los pondrás en los dos extremos del propiciatorio.»\n— Éxodo 25:18',
+      },
+      {
+        titulo: 'La diferencia entre adorar y venerar',
+        texto:
+          'La teología católica distingue con precisión: adoración (latría) es el culto que solo le corresponde a Dios. Veneración (dulía) es el honor dado a personas santas como modelos e intercesores. Las imágenes en las iglesias no son dioses — son recordatorios visuales de personas que vivieron la fe. Como las fotos de tus seres queridos en tu casa.',
+      },
+      {
+        titulo: 'El Templo de Salomón estaba lleno de imágenes',
+        texto:
+          'El Templo de Salomón, construido según los planos de Dios, tenía grabados de querubines, palmeras, flores y bueyes por todas partes. Nunca fue considerado idolátrico por la Biblia. El mismo edificio donde Dios habitó estaba decorado con representaciones artísticas.',
+        cita: '«Cubrió las paredes de la casa alrededor de figuras de querubines, palmeras y flores abiertas.»\n— 1 Reyes 6:29',
+      },
+    ],
+    conclusion:
+      'La Biblia prohíbe adorar las imágenes, no tenerlas. El mismo Dios que dio el mandamiento también ordenó fabricar imágenes sagradas. La Iglesia Católica no adora las imágenes — las usa como recordatorios de personas santas y como ayuda visual para la oración. La diferencia entre idolatría y arte sacro es la misma que entre adorar la foto de alguien y amarla como recuerdo.',
+  },
+  {
+    id:        '14',
+    emoji:     '🤖',
+    mito:      'La Biblia predice la inteligencia artificial',
+    veredicto: 'VERDAD A MEDIAS',
+    intro:
+      'Con el avance de la IA ha crecido la pregunta: ¿la Biblia habló de esto? No hay ningún versículo que mencione computadoras o algoritmos. Pero hay pasajes que los teólogos aplican a estas realidades con argumentos que vale la pena tomar en serio.',
+    puntos: [
+      {
+        titulo: 'Apocalipsis 13:15 — la imagen que habla',
+        texto:
+          'La bestia del Apocalipsis hace que una imagen reciba "aliento de vida" para que pueda hablar y actuar de forma autónoma. Algunos teólogos modernos ven en esto una descripción anticipada de una IA con poder político. Es especulativo, pero el paralelo entre "imagen animada que habla" y sistemas de IA es llamativo.',
+        cita: '«Se le permitió infundir aliento a la imagen de la bestia, para que la imagen hablase.»\n— Apocalipsis 13:15',
+      },
+      {
+        titulo: 'Daniel 12:4 — el conocimiento se multiplica',
+        texto:
+          '"Muchos correrán de aquí para allá y el conocimiento se multiplicará." Escrito en el siglo VI a.C., esta descripción del tiempo del fin suena extrañamente familiar a la explosión de información digital y a la velocidad con que la IA procesa y genera conocimiento.',
+        cita: '«Muchos correrán de aquí para allá, y el conocimiento se multiplicará.»\n— Daniel 12:4',
+      },
+      {
+        titulo: 'Génesis 11 — el patrón de Babel',
+        texto:
+          'En la Torre de Babel, Dios dijo: "Nada les será imposible ahora." No intervino porque la tecnología fuera mala en sí — intervino porque la humanidad la usaba para sustituir a Dios. Ese patrón — tecnología + orgullo + desplazamiento de Dios — se repite a lo largo de la historia.',
+        cita: '«Nada les impedirá que logren lo que se han propuesto.»\n— Génesis 11:6',
+      },
+      {
+        titulo: 'Lo que la Biblia sí dice con claridad',
+        texto:
+          'La Biblia no predice tecnologías específicas — describe patrones del corazón humano: el orgullo que quiere ser como Dios, el conocimiento que puede usarse para el bien o para el mal, la responsabilidad moral que viene con el poder. Esos principios aplican perfectamente al desarrollo de IA.',
+      },
+    ],
+    conclusion:
+      'La Biblia no tiene una profecía específica sobre la inteligencia artificial. Pero sí describe patrones — orgullo tecnológico, conocimiento sin sabiduría, poder sin humildad — que aplican perfectamente a este momento histórico. Que Apocalipsis 13:15 sea una descripción literal de la IA es especulativo. Que la Biblia tenga principios que guían el uso ético de la IA, es verdad.',
+  },
+  {
+    id:        '15',
+    emoji:     '🧠',
+    mito:      'La inteligencia artificial puede reemplazar a los seres humanos',
+    veredicto: 'MALENTENDIDO',
+    intro:
+      'El miedo a que la IA reemplace a los seres humanos crece con cada avance tecnológico. La Biblia no habla de IA, pero sí afirma algo sobre el ser humano que ningún algoritmo puede replicar: la imagen de Dios.',
+    puntos: [
+      {
+        titulo: 'El imago Dei — lo que ningún código puede reproducir',
+        texto:
+          'Dios creó al ser humano a su imagen y semejanza. Esa imagen no es física — es la capacidad de amar, perdonar, crear con propósito moral y relacionarse con Dios. Ninguna IA tiene alma, puede arrepentirse genuinamente, sufrir con sentido ni entrar en comunión con el Creador.',
+        cita: '«Y creó Dios al hombre a su imagen, a imagen de Dios lo creó; varón y hembra los creó.»\n— Génesis 1:27',
+      },
+      {
+        titulo: 'Identidad personal única ante Dios',
+        texto:
+          'Jeremías 1:5 dice: "Antes que te formase en el vientre te conocí." Cada persona tiene un nombre único conocido por Dios, una historia irreemplazable. La IA procesa información en escala masiva — no tiene identidad propia ni es conocida por Dios de esa manera personal.',
+        cita: '«Antes que te formase en el vientre te conocí, y antes que nacieses te santifiqué.»\n— Jeremías 1:5',
+      },
+      {
+        titulo: 'Lo que la IA puede — y lo que no puede',
+        texto:
+          'La IA puede imitar el lenguaje, el arte, el razonamiento lógico y procesar información más rápido que cualquier humano. No puede amar, perdonar genuinamente, sacrificarse por otro, sentir compasión real ni tener fe. Lo que hace que la vida humana tenga valor eterno es exactamente lo que la IA no puede replicar.',
+      },
+      {
+        titulo: 'La advertencia real: no reemplazo, sino idolatría',
+        texto:
+          'El peligro bíblico más profundo no es que la IA nos reemplace — es que usemos la IA para intentar no necesitar a Dios. Cuando la tecnología se convierte en el objeto de confianza absoluta, estamos repitiendo el patrón de Babel: la humanidad confiando en su propia creación más que en su Creador.',
+        cita: '«Maldito el hombre que confía en el hombre y hace de la carne su brazo.»\n— Jeremías 17:5',
+      },
+    ],
+    conclusion:
+      'La IA puede reemplazar muchas funciones humanas. No puede reemplazar al ser humano. La imagen de Dios, la capacidad de amar y ser amado, la conciencia moral y la relación personal con el Creador son realidades que ningún modelo de lenguaje puede reproducir. El miedo al reemplazo confunde lo que hacemos con lo que somos.',
+  },
+  {
     id:        '12',
     emoji:     '🤝',
     mito:      '"Ayúdate que Dios te ayudará" es una frase bíblica',

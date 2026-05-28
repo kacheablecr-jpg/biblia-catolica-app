@@ -959,6 +959,94 @@ const PREGUNTAS: Pregunta[] = [
     mensaje:
       'La fe no es el resultado de ganar un debate — es el resultado de encontrarte con Cristo. La Iglesia Católica es la más antigua, la más documentada y la más extendida de la historia. Pero lo más importante no es tener razón sobre la institución — es conocer al Señor que la fundó y que te busca a ti.',
   },
+  {
+    id:        '25',
+    emoji:     '📿',
+    categoria: 'Fe y vida cotidiana',
+    pregunta:  '¿Qué dice la Biblia sobre repetir oraciones como el rosario?',
+    intro:
+      'Una crítica frecuente al rosario es que viola Mateo 6:7, donde Jesús habla de no usar vanas repeticiones. Pero leer el texto completo — y ver cómo ora la Biblia misma — cambia completamente la imagen.',
+    puntos: [
+      {
+        titulo: 'El versículo que se cita — en su contexto exacto',
+        texto:
+          'Mateo 6:7 dice: "No uséis vanas repeticiones, como los gentiles, que piensan que por su mucha palabrería serán oídos." La palabra griega es "battalogeo" — repetir palabras sin sentido, como un mantra mágico para manipular a un dios. El problema no es la repetición — es la vaciedad. "Vana" es la palabra decisiva.',
+        cita: '«Y orando, no uséis vanas repeticiones, como los gentiles, que piensan que por su mucha palabrería serán oídos.»\n— Mateo 6:7',
+      },
+      {
+        titulo: 'Jesús mismo repitió sus oraciones',
+        texto:
+          'En Getsemaní, la noche antes de su muerte, Jesús oró y fue a ver a sus discípulos, volvió a orar, y luego fue otra vez por tercera vez "diciendo las mismas palabras". Si repetir oraciones fuera pecado, Jesús habría pecado en el momento más sagrado de su vida.',
+        cita: '«Y dejándolos, se fue de nuevo y oró por tercera vez, diciendo las mismas palabras.»\n— Mateo 26:44',
+      },
+      {
+        titulo: 'Los Salmos están llenos de repetición',
+        texto:
+          'El Salmo 136 repite la frase "porque para siempre es su misericordia" exactamente 26 veces — una por cada versículo. El Salmo 150 es una letanía repetida de alabanzas. La repetición litúrgica y orante es un patrón profundamente bíblico, no una práctica pagana.',
+        cita: '«Alabad al Señor, porque él es bueno; porque para siempre es su misericordia.»\n— Salmo 136:1',
+      },
+      {
+        titulo: 'El Apocalipsis — repetición eterna ante el trono',
+        texto:
+          'En Apocalipsis 4:8, los cuatro seres vivientes alrededor del trono de Dios "no cesaban de decir día y noche: Santo, santo, santo es el Señor Dios Todopoderoso." La repetición incesante no es vaciedad — en ese contexto es la forma más elevada de adoración.',
+        cita: '«Y los cuatro seres vivientes... no cesaban de decir: Santo, santo, santo es el Señor Dios Todopoderoso.»\n— Apocalipsis 4:8',
+      },
+      {
+        titulo: 'El rosario — meditación con texto bíblico',
+        texto:
+          'El Ave María está tomada directamente de la Biblia: el saludo del ángel (Lucas 1:28) y las palabras de Isabel (Lucas 1:42). El rosario no es adorar a María — es meditar en los misterios de la vida de Cristo mientras se repite una oración bíblica. La repetición es el ritmo que libera la mente para meditar.',
+        cita: '«Alégrate, muy favorecida, el Señor es contigo.»\n— Lucas 1:28',
+      },
+    ],
+    conclusion:
+      'La Biblia prohíbe las "vanas repeticiones" — palabras vacías sin fe ni sentido. No prohíbe la repetición orante. El mismo Jesús repitió sus oraciones. Los Salmos repiten frases decenas de veces. El Apocalipsis muestra seres celestiales que repiten sin cesar. Lo que importa no es cuántas veces se dice algo, sino si el corazón está presente y la oración tiene contenido real.',
+    mensaje:
+      'La oración no se mide en palabras originales — se mide en corazón presente. Puedes repetir "te amo" a Dios mil veces y cada vez ser más verdad. La vaciedad no está en la repetición — está en la ausencia de fe. Cuando el corazón está vuelto hacia Dios, incluso la oración más sencilla y repetida es profunda.',
+  },
+  {
+    id:        '26',
+    emoji:     '🙌',
+    categoria: 'Fe y vida cotidiana',
+    pregunta:  '¿Por qué la Iglesia pide dinero en misa y qué dice la Biblia?',
+    intro:
+      'A muchas personas les incomoda la colecta durante la misa. Algunos la ven como negocio. La Biblia tiene mucho que decir sobre la ofrenda — y casi nada de lo que dice se parece a lo que la cultura popular imagina.',
+    puntos: [
+      {
+        titulo: 'El diezmo en el Antiguo Testamento',
+        texto:
+          'La práctica de dar a Dios una porción de los ingresos viene del Antiguo Testamento. El diezmo — el 10% — sostenía el Templo, los sacerdotes y a los pobres. No era un impuesto religioso arbitrario — era un acto de adoración que reconocía que todo proviene de Dios.',
+        cita: '«Traed todos los diezmos al alfolí y haya alimento en mi casa; y probadme ahora en esto.»\n— Malaquías 3:10',
+      },
+      {
+        titulo: '2 Corintios 9 — la actitud que importa',
+        texto:
+          'El Nuevo Testamento no fija un porcentaje obligatorio. Lo que sí fija es la actitud: dar voluntariamente, con alegría y sin presión. "Dios ama al dador alegre" es el principio central. La ofrenda forzada o resentida pierde su sentido de adoración.',
+        cita: '«Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre.»\n— 2 Corintios 9:7',
+      },
+      {
+        titulo: 'La ofrenda sostenía a la comunidad',
+        texto:
+          'En la iglesia primitiva, la práctica era radical: vendían sus propiedades y compartían con todos según la necesidad. La ofrenda sostenía a los pobres, a los ministros que predicaban y al culto. Era economía comunitaria fundada en la generosidad, no recaudación institucional.',
+        cita: '«No había entre ellos ningún necesitado... lo ponían a los pies de los apóstoles, y se repartía a cada uno según su necesidad.»\n— Hechos 4:34-35',
+      },
+      {
+        titulo: 'La crítica legítima que la Biblia también hace',
+        texto:
+          'La Biblia condena enérgicamente el mal uso del dinero sagrado. Malaquías condena a los sacerdotes que se quedaban con lo mejor. Jesús expulsó a los comerciantes del Templo. La crítica al enriquecimiento personal a costa de las ofrendas tiene base bíblica sólida — y la Iglesia debe rendir cuentas de lo que recibe.',
+        cita: '«Y les dijo: Escrito está: Mi casa, casa de oración será llamada; mas vosotros la habéis hecho cueva de ladrones.»\n— Mateo 21:13',
+      },
+      {
+        titulo: 'El principio más profundo: todo es de Dios',
+        texto:
+          'David, al recibir ofrendas para el Templo, oró: "¿Quiénes somos nosotros para poder ofrecer voluntariamente cosas semejantes? Tuyo es todo, y de lo recibido de tu mano te damos." La ofrenda no es darle a Dios algo que le falta — es reconocer que todo lo que tienes viene de Él.',
+        cita: '«Tuyo es todo, y de lo recibido de tu mano te damos.»\n— 1 Crónicas 29:14',
+      },
+    ],
+    conclusion:
+      'La Biblia sustenta la ofrenda como práctica de adoración, sostenimiento comunitario y reconocimiento de que todo viene de Dios. No como obligación bajo presión, sino como decisión libre y alegre. La crítica válida no es que la Iglesia pida — sino exigir que lo recibido se use para lo que la Biblia manda: sostener el culto, pagar justamente a los ministros y servir a los pobres.',
+    mensaje:
+      'Cuando das con alegría, no estás perdiendo algo — estás practicando la mayor libertad posible: la libertad de no estar atado a lo material. El dador alegre no es el que tiene más, sino el que confía más. Dar es un acto de fe: creer que Dios proveerá lo que necesitas aunque hayas dado lo que tenías.',
+  },
 ]
 
 function buildTexto(p: Pregunta): string {
