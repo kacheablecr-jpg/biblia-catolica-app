@@ -1266,6 +1266,182 @@ const PREGUNTAS: Pregunta[] = [
     mensaje:
       'No necesitas ordenación ni título para evangelizar — necesitas haber encontrado a Cristo y no poder callarlo. El testimonio más poderoso no es el del que sabe más teología, sino el del que dice con convicción: "Yo estaba perdido, y fui encontrado." Esa historia nadie te la puede quitar, y nadie puede decir que no le aplica.',
   },
+  {
+    id:        '32',
+    emoji:     '✨',
+    categoria: 'Dios y la Trinidad',
+    pregunta:  '¿Quién es Dios? ¿Cómo se vería, dónde está y cómo actúa?',
+    intro:
+      'La Biblia habla de Dios desde la primera página hasta la última. No lo describe como una idea abstracta ni como una fuerza impersonal — lo describe como un ser real, presente y activo. Pero también deja en claro que Dios es radicalmente diferente a todo lo que conocemos.',
+    puntos: [
+      {
+        titulo: '¿Cómo es Dios? — Espíritu, no materia',
+        texto:
+          'Jesús dijo que "Dios es espíritu". No tiene cuerpo físico, no ocupa un lugar en el espacio, no se puede ver con los ojos humanos. Cuando la Biblia describe a Dios con brazos, ojos o manos, usa lenguaje figurado para comunicar su poder y su cuidado — no una descripción literal de su forma.',
+        cita: '«Dios es espíritu, y quienes lo adoran deben adorarlo en espíritu y en verdad.»\n— Juan 4:24',
+      },
+      {
+        titulo: '¿Se puede ver a Dios?',
+        texto:
+          'La Biblia dice que nadie puede ver el rostro de Dios y vivir — su gloria es demasiado para que un ser humano la soporte. Pero varios personajes bíblicos tuvieron visiones de Él: Isaías lo vio en un trono alto y sublime, rodeado de serafines. Daniel lo vio como un "Anciano de Días" con ropas blancas y cabello como lana pura. Estas son visiones adaptadas a la capacidad humana, no la descripción completa de lo que Dios es.',
+        cita: '«Vi al Señor sentado en un trono alto y sublime; los pliegues de su manto llenaban el templo.»\n— Isaías 6:1',
+      },
+      {
+        titulo: '¿Dónde está Dios?',
+        texto:
+          'En todos lados al mismo tiempo. El Salmo 139 es el texto más claro: si subes al cielo, allí está; si desciendes al abismo, allí está; si vuelas al extremo del mar, allí también. No hay lugar donde Dios no esté presente. Y al mismo tiempo, Jeremías dice que Dios llena el cielo y la tierra. No está "en algún lugar" — está en todos.',
+        cita: '«¿A dónde podría alejarme de tu Espíritu? ¿A dónde podría huir de tu presencia?»\n— Salmo 139:7',
+      },
+      {
+        titulo: '¿Cómo actúa Dios en el mundo?',
+        texto:
+          'La Biblia muestra a un Dios que actúa constantemente. Creó el universo (Génesis 1). Liberó a un pueblo esclavo (Éxodo). Habló por los profetas. Se hizo hombre en Jesús. Resucitó a su Hijo. Derrama su Espíritu. Y Pablo dice que Dios trabaja en todas las cosas para el bien de quienes le aman — no es un Dios que creó el mundo y se fue.',
+        cita: '«Sabemos que Dios dispone todas las cosas para el bien de quienes lo aman.»\n— Romanos 8:28',
+      },
+      {
+        titulo: '¿Cómo es su carácter?',
+        texto:
+          'El Salmo 103 da el retrato más completo: compasivo y clemente, lento para la ira, grande en amor. Perdona, sana, rescata, corona de amor y compasión. No trata al ser humano como merecen sus pecados. Su amor es tan alto como el cielo sobre la tierra, y aleja los pecados tan lejos como el oriente del occidente.',
+        cita: '«El Señor es clemente y compasivo, lento para la ira y grande en amor.»\n— Salmo 103:8',
+      },
+    ],
+    conclusion:
+      'Dios es espíritu — no tiene forma física. No se puede ver directamente, aunque la Biblia recoge visiones que intentan comunicar su gloria. Está en todas partes al mismo tiempo. Y actúa constantemente en la historia, en la naturaleza y en la vida de las personas. No es una fuerza impersonal ni un Dios lejano — es un Dios presente, personal y activo.',
+    mensaje:
+      'No puedes ver a Dios con los ojos, pero sí puedes conocerlo. Lo conociste cuando alguien te perdonó sin motivo, cuando saliste de algo que te tenía atrapado, cuando sentiste que no estabas solo en la oscuridad. Eso no fue casualidad — fue Dios actuando como siempre ha actuado: en silencio, en lo cotidiano, de manera que solo quien busca puede reconocer.',
+  },
+  {
+    id:        '33',
+    emoji:     '✝️',
+    categoria: 'Dios y la Trinidad',
+    pregunta:  '¿Quién es Jesús según la Biblia?',
+    intro:
+      'Jesús es el personaje más influyente de la historia humana — pero la Biblia presenta una imagen de Él que va mucho más allá de un buen maestro o un profeta. El Nuevo Testamento hace afirmaciones sobre Jesús que son únicas y que cambian todo.',
+    puntos: [
+      {
+        titulo: 'Es Dios hecho hombre',
+        texto:
+          'El evangelio de Juan abre con una afirmación que lo dice todo: "En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios." Y luego: "el Verbo se hizo carne y habitó entre nosotros." Jesús no es una criatura que llegó a ser divina — es el Dios eterno que asumió naturaleza humana.',
+        cita: '«En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios... Y el Verbo se hizo carne y habitó entre nosotros.»\n— Juan 1:1,14',
+      },
+      {
+        titulo: 'Existió antes de nacer en Belén',
+        texto:
+          'En una discusión con los fariseos, Jesús dijo algo que los dejó sin palabras: "Antes que Abraham fuese, yo soy." Usó el nombre sagrado de Dios — el mismo con el que Dios se identificó ante Moisés. No dijo "yo era", sino "yo soy" — afirmando existencia eterna y naturaleza divina.',
+        cita: '«En verdad les digo que antes que Abraham naciera, yo soy.»\n— Juan 8:58',
+      },
+      {
+        titulo: 'Completamente humano al mismo tiempo',
+        texto:
+          'La Biblia no romantiza la humanidad de Jesús. Tuvo hambre, se cansó, lloró, sintió miedo en Getsemaní, fue tentado en todo como nosotros — pero sin pecar. Hebreos dice que por esto puede compadecerse de nuestra debilidad: no habla de lejos. Vivió lo que vivimos.',
+        cita: '«Porque no tenemos un Sumo Sacerdote que no pueda compadecerse de nuestras debilidades, sino uno que fue tentado en todo según nuestra semejanza, pero sin pecado.»\n— Hebreos 4:15',
+      },
+      {
+        titulo: 'Su misión: buscar y salvar lo que se había perdido',
+        texto:
+          'Jesús describió su misión con claridad: vino a buscar y a salvar lo perdido. No llegó para los que ya estaban bien — llegó para los rotos, los excluidos, los que habían fallado. Y el método no fue condenarlos sino acercarse a ellos.',
+        cita: '«El Hijo del hombre vino a buscar y a salvar lo que se había perdido.»\n— Lucas 19:10',
+      },
+      {
+        titulo: 'La única salida — y el camino que nadie esperaba',
+        texto:
+          'Jesús dijo que Él mismo es el camino, la verdad y la vida — no una filosofía ni un sistema religioso. Y el camino fue inesperado: una cruz, una muerte, una resurrección. No salvó al mundo desde el poder sino desde la entrega total. Ese es el Dios que revela la Biblia: uno que salva muriendo.',
+        cita: '«Yo soy el camino, la verdad y la vida. Nadie viene al Padre sino por mí.»\n— Juan 14:6',
+      },
+    ],
+    conclusion:
+      'Según la Biblia, Jesús es Dios eterno que se hizo hombre sin dejar de ser Dios. Existió antes de la creación, nació de una virgen, vivió completamente humano, murió en la cruz, resucitó al tercer día y volverá. No es solo un modelo moral ni un profeta más — es el centro de toda la historia humana y la respuesta de Dios a la condición humana.',
+    mensaje:
+      'La pregunta que Jesús hizo a sus discípulos sigue siendo la pregunta más importante: "¿Y vosotros, quién decís que soy yo?" No "¿qué saben los teólogos?" ni "¿qué dice la tradición?" — sino "vos, ¿quién decís que soy?" La respuesta a esa pregunta cambia cómo vivís, cómo morís y qué esperás después.',
+  },
+  {
+    id:        '34',
+    emoji:     '🕊️',
+    categoria: 'Dios y la Trinidad',
+    pregunta:  '¿Quién es el Espíritu Santo según la Biblia?',
+    intro:
+      'El Espíritu Santo es la persona de la Trinidad que más confusión genera. Algunos lo ven como una fuerza o una energía. La Biblia lo presenta de manera diferente: como una persona divina, igual al Padre y al Hijo, activa en el mundo desde la creación.',
+    puntos: [
+      {
+        titulo: 'Es Dios — no una fuerza impersonal',
+        texto:
+          'En Hechos 5, Pedro le dice a Ananías que ha mentido al Espíritu Santo y luego añade que ha mentido a Dios. Los dos son lo mismo. El Espíritu Santo tiene atributos que solo Dios tiene: omnipresencia (Salmo 139:7), omnisciencia (1 Corintios 2:10), eternidad (Hebreos 9:14). No es un poder que uno usa — es una persona que actúa.',
+        cita: '«¿Por qué llenó Satanás tu corazón para que mintieras al Espíritu Santo?... No has mentido a los hombres, sino a Dios.»\n— Hechos 5:3-4',
+      },
+      {
+        titulo: 'Cómo se manifiesta — distintas formas',
+        texto:
+          'La Biblia muestra al Espíritu Santo de maneras distintas según el momento. En el bautismo de Jesús, descendió visible como una paloma. En Pentecostés, llegó como viento recio y lenguas de fuego. Jesús dijo que es como el viento: oyes su sonido pero no sabes de dónde viene ni adónde va. No se lo puede controlar ni predecir — actúa donde quiere.',
+        cita: '«El viento sopla donde quiere, y oyes su sonido, mas ni sabes de dónde viene, ni a dónde va; así es todo aquel que es nacido del Espíritu.»\n— Juan 3:8',
+      },
+      {
+        titulo: 'Su obra en el creyente',
+        texto:
+          'El Espíritu Santo hace varias cosas en quien cree: convence de pecado, guía hacia la verdad, intercede por nosotros cuando no sabemos qué pedir, produce frutos de carácter (amor, gozo, paz, paciencia), da dones para servir a la iglesia y da la certeza de que somos hijos de Dios.',
+        cita: '«El Espíritu mismo da testimonio a nuestro espíritu de que somos hijos de Dios.»\n— Romanos 8:16',
+      },
+      {
+        titulo: 'El Paráclito — el que camina al lado',
+        texto:
+          'Jesús llamó al Espíritu Santo "Paráclito" — palabra griega que significa "el que es llamado al lado de uno", un abogado defensor, un consolador. Prometió que el Padre enviaría a otro como Él para estar con los discípulos para siempre. No es un sustituto menor de Jesús — es la presencia continua de Dios en el mundo después de la Ascensión.',
+        cita: '«Y yo rogaré al Padre, y os dará otro Consolador, para que esté con vosotros para siempre.»\n— Juan 14:16',
+      },
+      {
+        titulo: 'Puede ser entristecido — señal de que es una persona',
+        texto:
+          'Pablo escribe "no entristezcáis al Espíritu Santo de Dios". Solo una persona puede ser entristecida — una fuerza no siente. Esto confirma que el Espíritu Santo no es una energía ni un fluido espiritual: tiene emociones, voluntad y relaciones. Se puede ofender, se puede resistir, se puede apagar.',
+        cita: '«No entristezcáis al Espíritu Santo de Dios, con el cual fuisteis sellados para el día de la redención.»\n— Efesios 4:30',
+      },
+    ],
+    conclusion:
+      'El Espíritu Santo es la tercera persona de la Trinidad: completamente Dios, igual al Padre y al Hijo. No es una fuerza ni una energía — es una persona con inteligencia, voluntad y emociones. Actúa en la creación, en la historia y en cada creyente. Su obra es hacer real en la vida del ser humano lo que el Padre planeó y el Hijo realizó.',
+    mensaje:
+      'El Espíritu Santo no es algo que se busca en experiencias extraordinarias. Está en lo cotidiano: en la paz que te llega después de orar, en el impulso de hacer bien cuando podías no hacerlo, en la voz interna que te llama a algo mejor. Eso no es psicología — es la persona de Dios caminando al lado tuyo.',
+  },
+  {
+    id:        '35',
+    emoji:     '🔺',
+    categoria: 'Dios y la Trinidad',
+    pregunta:  '¿Qué es la Trinidad? ¿Cómo puede Dios ser uno y tres a la vez?',
+    intro:
+      'La Trinidad es el misterio central del cristianismo. La palabra no aparece en la Biblia, pero el concepto está en cada página. Y la pregunta es legítima: ¿cómo puede Dios ser uno y tres al mismo tiempo? La respuesta honesta tiene dos partes: la Biblia enseña ambas cosas, y ninguna analogía humana puede explicar del todo algo que está más allá de la mente humana.',
+    puntos: [
+      {
+        titulo: 'La Biblia enseña que Dios es UNO',
+        texto:
+          'El Shemá — la oración central del judaísmo — comienza con "Escucha, Israel: el Señor nuestro Dios, el Señor uno es." Jesús mismo la citó como el primer mandamiento. No hay dos dioses ni tres dioses — hay un solo Dios. El monoteísmo es el fundamento irrenunciable de toda la Biblia.',
+        cita: '«El Señor nuestro Dios, el Señor uno es. Amarás al Señor tu Dios con todo tu corazón.»\n— Deuteronomio 6:4-5',
+      },
+      {
+        titulo: 'La Biblia también enseña que son TRES personas distintas',
+        texto:
+          'En el bautismo de Jesús, las tres personas aparecen simultáneamente: el Hijo siendo bautizado, el Espíritu descendiendo como paloma, la voz del Padre desde el cielo. No son el mismo actuando en papeles distintos — son tres que actúan a la vez, cada uno de manera diferente.',
+        cita: '«Y Jesús, después de ser bautizado, subió del agua... y vio al Espíritu de Dios descender como paloma... Y hubo una voz del cielo: Este es mi Hijo amado.»\n— Mateo 3:16-17',
+      },
+      {
+        titulo: 'La Gran Comisión — los tres en un solo nombre',
+        texto:
+          'Jesús mandó bautizar "en el nombre" (singular) del Padre, del Hijo y del Espíritu Santo. No dijo "en los nombres" (plural) — dijo "en el nombre" como si los tres tuvieran un solo nombre. Esta tensión entre la unidad y la pluralidad es precisamente lo que la doctrina de la Trinidad intenta expresar.',
+        cita: '«Id y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo.»\n— Mateo 28:19',
+      },
+      {
+        titulo: '¿Por qué no se puede explicar del todo?',
+        texto:
+          'Ninguna analogía funciona perfectamente: el agua que es hielo, líquido y vapor (tres estados, pero no tres personas). El hombre que es hijo, padre y esposo (tres roles, una sola persona). El trébol de tres hojas. Todas fallan en algún punto porque pretenden reducir a Dios a algo del mundo creado. Dios es la fuente de toda realidad — no puede ser completamente explicado con categorías de esa misma realidad.',
+        cita: '«Porque mis pensamientos no son vuestros pensamientos, ni vuestros caminos mis caminos, dice el Señor.»\n— Isaías 55:8',
+      },
+      {
+        titulo: 'Lo que la Trinidad revela sobre el amor',
+        texto:
+          'La Trinidad explica algo que ningún otro monoteísmo puede explicar: por qué Dios es amor desde la eternidad. Si Dios fuera absolutamente solitario antes de la creación, ¿a quién amaba? La Trinidad dice que dentro de Dios mismo hay una comunión de amor eterno entre el Padre, el Hijo y el Espíritu. El amor no comenzó cuando Dios creó — el amor es lo que Dios es.',
+        cita: '«El que no ama no ha conocido a Dios, porque Dios es amor.»\n— 1 Juan 4:8',
+      },
+    ],
+    conclusion:
+      'La Trinidad no es una contradicción lógica sino un misterio que supera la lógica humana. Dios es un solo ser divino que existe en tres personas eternas y distintas: Padre, Hijo y Espíritu Santo. Cada uno es plenamente Dios. Los tres son un solo Dios. La Biblia no lo explica con filosofía — lo muestra en acción en la historia de la salvación.',
+    mensaje:
+      'No necesitás entender la Trinidad para relacionarte con Dios — igual que no necesitás entender cómo funciona el amor para amar. Pero cuando empezás a entenderla, algo cambia: Dios deja de ser una fuerza solitaria en el cielo y se convierte en una comunidad de amor que te invita adentro. Esa es la invitación más extraordinaria que existe.',
+  },
 ]
 
 function buildTexto(p: Pregunta): string {
