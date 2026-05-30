@@ -44,7 +44,7 @@ export default function AcercaDeScreen() {
         <View style={s.heroBox}>
           <Text style={s.heroEmoji}>✝</Text>
           <Text style={s.heroTitulo}>Palabra Viva</Text>
-          <Text style={s.heroVersion}>Versión 2.3.0  •  DHH Edición Internacional</Text>
+          <Text style={s.heroVersion}>Versión 2.4.0  •  DHH — Canon Católico (75 libros)</Text>
         </View>
 
         {/* Traducción */}
@@ -62,8 +62,8 @@ export default function AcercaDeScreen() {
         <Text style={s.seccion}>🗂  Contenido de la app</Text>
         <View style={s.card}>
           {[
-            ['66', 'libros completos'],
-            ['39', 'del Antiguo Testamento'],
+            ['75', 'libros completos (canon católico)'],
+            ['48', 'del Antiguo Testamento'],
             ['27', 'del Nuevo Testamento'],
             ['35,887', 'versículos en total'],
             ['16', 'rutas temáticas'],
@@ -102,7 +102,7 @@ export default function AcercaDeScreen() {
             <View style={{ flex: 1 }}>
               <Text style={s.fuenteTitulo}>La Biblia DHH</Text>
               <Text style={s.fuenteTexto}>
-                El texto bíblico completo (66 libros, 35,887 versículos) está almacenado en el dispositivo en la traducción Dios Habla Hoy de las Sociedades Bíblicas Unidas.
+                El texto bíblico completo (75 libros, 35,887 versículos) — incluyendo los 7 libros deuterocanónicos del canon católico — está almacenado en el dispositivo en la traducción Dios Habla Hoy de las Sociedades Bíblicas Unidas.
               </Text>
             </View>
           </View>
