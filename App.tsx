@@ -13,6 +13,7 @@ import PreguntasScreen  from './src/screens/PreguntasScreen'
 import AlegriasScreen  from './src/screens/AlegriasScreen'
 import MitosScreen          from './src/screens/MitosScreen'
 import MandamientosScreen   from './src/screens/MandamientosScreen'
+import EvangelioDiarioScreen from './src/screens/EvangelioDiarioScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -31,7 +32,8 @@ export default function App() {
         <Stack.Screen name="Preguntas"  component={PreguntasScreen} />
         <Stack.Screen name="Alegrias"   component={AlegriasScreen} />
         <Stack.Screen name="Mitos"          component={MitosScreen} />
-        <Stack.Screen name="Mandamientos"   component={MandamientosScreen} />
+        <Stack.Screen name="Mandamientos"    component={MandamientosScreen} />
+        <Stack.Screen name="EvangelioDiario" component={EvangelioDiarioScreen} />
       </Stack.Navigator>
     </NavigationContainer>
     </SafeAreaProvider>

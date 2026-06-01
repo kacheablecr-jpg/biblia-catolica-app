@@ -13,7 +13,7 @@ const COLORES = { fondo: '#0f172a', card: '#1e293b', texto: '#f1f5f9', subTexto:
 const BASE_URL = 'https://pos-one-backend.onrender.com/api/biblia-app'
 const PAGINA_URL = 'https://pos-one-backend.onrender.com/biblia'
 const INSTALL_KEY = 'biblia_install_registered'
-const CURRENT_VERSION = 'v2.4.0'
+const CURRENT_VERSION = 'v2.5.0'
 const GITHUB_RELEASES_API = 'https://api.github.com/repos/kacheablecr-jpg/biblia-catolica-app/releases/latest'
 const DOWNLOAD_URL = 'https://github.com/kacheablecr-jpg/biblia-catolica-app/releases/latest/download/palabra-viva.apk'
 
@@ -244,6 +244,16 @@ export default function HomeScreen() {
               <Text style={s.rutaBtnFlecha}>›</Text>
             </TouchableOpacity>
 
+            {/* Evangelio del Día */}
+            <TouchableOpacity style={s.evangelioBtn} onPress={() => nav.navigate('EvangelioDiario')} activeOpacity={0.8}>
+              <Text style={s.rutaBtnIcon}>✝</Text>
+              <View style={{ flex: 1 }}>
+                <Text style={s.evangelioBtnTitulo}>Evangelio del día</Text>
+                <Text style={s.evangelioBtnSub}>Leer y escuchar el evangelio de hoy con reflexión</Text>
+              </View>
+              <Text style={s.rutaBtnFlecha}>›</Text>
+            </TouchableOpacity>
+
             {/* Mitos de la Biblia */}
             <TouchableOpacity style={s.mitosBtn} onPress={() => nav.navigate('Mitos')} activeOpacity={0.8}>
               <Text style={s.rutaBtnIcon}>🔍</Text>
@@ -324,6 +334,9 @@ const s = StyleSheet.create({
   preguntasBtn:         { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#451a03', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#78350f' },
   preguntasBtnTitulo:   { color: '#fde68a', fontWeight: '700', fontSize: 15 },
   preguntasBtnSub:      { color: '#fbbf24', fontSize: 12, marginTop: 2 },
+  evangelioBtn:         { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#1e1b4b', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#3730a3' },
+  evangelioBtnTitulo:   { color: '#e0e7ff', fontWeight: '700', fontSize: 15 },
+  evangelioBtnSub:      { color: '#818cf8', fontSize: 12, marginTop: 2 },
   mitosBtn:             { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#2e1065', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#4c1d95' },
   mitosBtnTitulo:       { color: '#e9d5ff', fontWeight: '700', fontSize: 15 },
   mitosBtnSub:          { color: '#c084fc', fontSize: 12, marginTop: 2 },

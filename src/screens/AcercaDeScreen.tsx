@@ -44,7 +44,7 @@ export default function AcercaDeScreen() {
         <View style={s.heroBox}>
           <Text style={s.heroEmoji}>✝</Text>
           <Text style={s.heroTitulo}>Palabra Viva</Text>
-          <Text style={s.heroVersion}>Versión 2.4.0  •  DHH — Canon Católico (75 libros)</Text>
+          <Text style={s.heroVersion}>Versión 2.5.0  •  DHH — Canon Católico (75 libros)</Text>
         </View>
 
         {/* Traducción */}
