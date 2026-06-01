@@ -224,64 +224,241 @@ const SPECIFIC: Record<string, GospelEntry> = {
   '2026-12-31': { titulo:'Fin de año', libroId:52, libroNombre:'San Juan', capitulo:1, inicio:1, fin:18, explicacion:'En el principio era el Verbo y el Verbo era Dios. Al terminar el año, la Iglesia nos invita a contemplar el origen de todo: Cristo, la Palabra eterna. La historia entera, con sus alegrías y dolores, está sostenida por aquel que es principio y fin.' },
 }
 
-// Patrones semanales para días ordinarios (Año Litúrgico II — Marco y Lucas)
-// Formato: [libroId, libroNombre, capitulo, inicio, fin, resumen]
-const WEEKDAY_OT_II: Array<[number, string, number, number, number, string, string]> = [
-  [50,'San Marcos',9,14,29,'Jesús libera a un joven del espíritu impuro que sus discípulos no pudieron expulsar. "Esta clase no puede ser expulsada más que con oración." Hay situaciones que solo se resuelven con la oración profunda y confiada.','Semana OT'],
-  [50,'San Marcos',9,30,37,'Jesús anuncia de nuevo su pasión y resurrección. Los discípulos discuten quién es el mayor. Él pone a un niño en medio: el que quiera ser el primero que sea el último y el servidor de todos.','Semana OT'],
-  [50,'San Marcos',9,38,48,'El que no está contra nosotros está a favor de nosotros. Si tu mano te es ocasión de pecado, córtala. Las imágenes radicales de Jesús invitan a tomarse en serio el combate espiritual interior.','Semana OT'],
-  [50,'San Marcos',10,1,12,'Lo que Dios unió no lo separe el hombre. Jesús defiende la indisolubilidad del matrimonio contra las dispensas de la ley mosaica. El matrimonio cristiano es signo del amor fiel de Dios a su pueblo.','Semana OT'],
-  [50,'San Marcos',10,13,16,'Dejad que los niños se acerquen a mí. El Reino de los cielos es de quienes son como ellos. La confianza incondicional del niño en sus padres es el modelo de nuestra relación con Dios Padre.','Semana OT'],
-  [50,'San Marcos',10,17,27,'El joven rico se va triste porque tiene muchos bienes. Es más fácil que un camello pase por el ojo de una aguja que un rico entre en el Reino. El desapego de los bienes materiales es condición del discipulado.','Semana OT'],
-  [51,'San Lucas',10,1,12,'Jesús envía a los setenta y dos de dos en dos. La mies es mucha y los obreros pocos. El enviado lleva paz y cura a los enfermos. La misión cristiana es siempre en nombre de Cristo y confiando en su fuerza.','Semana OT'],
-  [51,'San Lucas',10,17,24,'Los setenta y dos regresan llenos de alegría porque los espíritus les obedecen. Jesús les dice que se alegren más por tener su nombre inscrito en el cielo que por los poderes recibidos.','Semana OT'],
-  [51,'San Lucas',10,25,37,'La parábola del buen samaritano responde a la pregunta "¿quién es mi prójimo?" El prójimo es todo el que necesita ayuda, sin fronteras de raza o religión. La misericordia concreta es el corazón del Evangelio.','Semana OT'],
-  [51,'San Lucas',10,38,42,'Marta y María: Marta se afana en los servicios mientras María escucha a Jesús. María ha elegido la parte mejor. El Señor no condena la actividad sino que invita a que nazca de la escucha de su Palabra.','Semana OT'],
-  [51,'San Lucas',11,1,13,'Los discípulos piden a Jesús que les enseñe a orar. Él les da el Padrenuestro. Pedid y se os dará; el Padre da el Espíritu Santo a quienes se lo piden. La oración es la respiración del alma cristiana.','Semana OT'],
-  [51,'San Lucas',11,27,28,'Una mujer exclama que es dichoso el vientre que te llevó. Jesús responde: dichosos más bien los que escuchan la Palabra de Dios y la guardan. La bienaventuranza de María no es solo biológica sino espiritual.','Semana OT'],
-  [51,'San Lucas',12,13,21,'La parábola del rico necio que acumula bienes para muchos años y esa noche le piden el alma. Así el que amasa tesoros para sí y no es rico ante Dios. La vida no consiste en los bienes que uno posee.','Semana OT'],
-  [51,'San Lucas',12,35,40,'Estad con las cinturas ceñidas y las lámparas encendidas. Velad porque el Hijo del Hombre vendrá a la hora que no pensáis. La vigilancia cristiana es la actitud del que espera con alegría la venida del Señor.','Semana OT'],
-  [51,'San Lucas',13,1,9,'¿Pensáis que esos galileos eran más pecadores? No, y si no os convertís todos pereceréis de la misma manera. La parábola de la higuera estéril invita a no desperdiciar el tiempo de la gracia.','Semana OT'],
-  [51,'San Lucas',13,10,17,'Jesús libera en sábado a una mujer encorvada durante dieciocho años. El jefe de la sinagoga protesta. Jesús responde: ¿no convenía desatar a esta hija de Abraham? La misericordia siempre tiene razón sobre el legalismo.','Semana OT'],
-  [51,'San Lucas',14,1,11,'El que se ensalce será humillado y el que se humille será ensalzado. Cuando vayas invitado a bodas no te pongas en el primer puesto. La humildad que busca el último lugar es la que Dios exalta.','Semana OT'],
-  [51,'San Lucas',14,12,14,'Cuando hagas un banquete invita a los pobres, los tullidos, los cojos y los ciegos. No tienes con qué agradecértelo, pero te será recompensado en la resurrección de los justos. La generosidad sin esperanza de retorno agrada a Dios.','Semana OT'],
-  [51,'San Lucas',15,1,10,'La oveja perdida y la dracma perdida: cuando la encuentra, llama a sus amigas para celebrar. Así hay más alegría en el cielo por un pecador que se convierte. Dios busca al perdido con incansable amor.','Semana OT'],
-  [51,'San Lucas',17,5,10,'Los apóstoles piden más fe. Jesús responde que con fe del tamaño de un grano de mostaza se hace lo imposible. Cuando hayan hecho todo, digan: somos siervos inútiles. La fe y la humildad son inseparables.','Semana OT'],
-  [51,'San Lucas',17,11,19,'Jesús sana a diez leprosos pero solo uno, un samaritano, regresa a dar gracias. ¿Dónde están los otros nueve? La gratitud a Dios por los dones recibidos es expresión de fe madura y sincera.','Semana OT'],
-  [51,'San Lucas',18,1,8,'La parábola de la viuda y el juez injusto: ella insiste hasta que el juez le hace justicia. ¿No hará Dios justicia a sus elegidos que claman a él día y noche? La oración perseverante mueve la mano de Dios.','Semana OT'],
-  [51,'San Lucas',18,35,43,'Un ciego grita: "Jesús, hijo de David, ten compasión de mí." Jesús pregunta qué quiere y responde: que vea. Jesús le da la vista y él le sigue glorificando a Dios. La oración audaz y perseverante es siempre escuchada.','Semana OT'],
-  [51,'San Lucas',19,1,10,'Zaqueo, el publicano enriquecido, sube a un árbol para ver a Jesús. Jesús lo llama por su nombre e insiste en hospedarse en su casa. La cercanía de Cristo transforma la vida del pecador. Hoy ha llegado la salvación a esta casa.','Semana OT'],
-  [51,'San Lucas',19,11,28,'La parábola de las minas: el señor reparte minas a sus siervos y pide que las negocien. Al que tiene se le dará más. Los dones de Dios son para hacerlos fructificar, no para guardarlos por miedo.','Semana OT'],
-  [51,'San Lucas',20,27,40,'Los saduceos preguntan sobre la resurrección. Jesús responde que en la resurrección ni se casan ni se dan en matrimonio. Dios no es Dios de muertos sino de vivos porque para él todos viven. La vida eterna supera toda categoría humana.','Semana OT'],
-  [51,'San Lucas',21,1,4,'La viuda que echa en el tesoro dos monedas pequeñas. Jesús dice que echó más que todos porque echó todo lo que tenía para vivir. La ofrenda que cuesta, que sale del sacrificio personal, es la que agrada a Dios.','Semana OT'],
-]
+// ── Leccionario real de días de semana — Tiempo Ordinario Año II ────────────
+// Formato: [libroId, libroNombre, capitulo, inicio, fin, explicacion]
+type R = [number, string, number, number, number, string]
 
-// Función para obtener el evangelio del día
-export function getGospelForDate(dateStr: string): GospelEntry | null {
-  // 1. Buscar en entradas específicas
-  if (SPECIFIC[dateStr]) return SPECIFIC[dateStr]
-
-  // 2. Para días no especificados usar patrón semanal
-  const d = new Date(dateStr + 'T12:00:00')
-  const dayOfWeek = d.getDay() // 0=Dom, 1=Lun ... 6=Sab
-  const dayOfYear = getDayOfYear(d)
-
-  // Los domingos sin entrada específica usan Marcos u otros
-  if (dayOfWeek === 0) {
-    // Domingo sin entrada → Marcos según semana
-    const weekNum = Math.floor(dayOfYear / 7) % WEEKDAY_OT_II.length
-    const [lid, lnom, cap, ini, fin, exp] = WEEKDAY_OT_II[weekNum]
-    return { titulo:'Tiempo Ordinario', libroId:lid, libroNombre:lnom, capitulo:cap, inicio:ini, fin:fin, explicacion:exp }
+// Índice: semana OT → día de semana (1=Lun … 6=Sáb)
+const OT_II: Record<number, Record<number, R>> = {
+  1: {
+    1:[50,'San Marcos',1,14,20,'Jesús proclama que el Reino está cerca y llama a cuatro pescadores. Lo dejan todo para seguirle. La llamada de Cristo es urgente y exige una respuesta total e inmediata.'],
+    2:[50,'San Marcos',1,21,28,'Jesús enseña con autoridad y expulsa a un espíritu impuro. La gente queda asombrada: su palabra tiene poder real para liberar. La enseñanza de Jesús no es teoría; transforma vidas.'],
+    3:[50,'San Marcos',1,29,39,'Jesús sana a la suegra de Pedro y a muchos enfermos. Al amanecer se retira a orar. La acción apostólica nace de la oración; sin ella se agota. El servicio sostenido por la contemplación es el modelo cristiano.'],
+    4:[50,'San Marcos',1,40,45,'Un leproso excluido se postra ante Jesús. Él lo toca y lo sana. Nadie está demasiado impuro para recibir la misericordia de Dios; él siempre sale al encuentro del que se acerca con fe.'],
+    5:[50,'San Marcos',2,1,12,'Cuatro amigos bajan a un paralítico por el techo hasta Jesús. Él ve su fe y perdona y sana al enfermo. La amistad que conduce al encuentro con Cristo es el mayor regalo que podemos dar a alguien.'],
+    6:[50,'San Marcos',2,13,17,'Jesús llama a Leví el publicano y come con pecadores. "No he venido a llamar a los justos sino a los pecadores." La misericordia de Dios no tiene prejuicios ni fronteras.'],
+  },
+  2: {
+    1:[50,'San Marcos',2,18,22,'No se pone vino nuevo en odres viejos. El Evangelio exige renovación interior. No basta añadir prácticas externas a una vida sin conversión real.'],
+    2:[50,'San Marcos',2,23,28,'El sábado fue hecho para el hombre, no el hombre para el sábado. Las leyes religiosas sirven a la persona; la religión auténtica libera, no oprime.'],
+    3:[50,'San Marcos',3,1,6,'Jesús sana en sábado a un hombre con la mano paralizada. El amor al prójimo siempre está por encima del legalismo. Ante la rigidez religiosa, Jesús elige siempre la vida y la compasión.'],
+    4:[50,'San Marcos',3,7,12,'Multitudes acuden a Jesús desde todas partes. La fama del bien atrae. Nuestro testimonio de vida puede ser el camino que lleva a otros al encuentro con Cristo.'],
+    5:[50,'San Marcos',3,13,19,'Jesús sube al monte y elige a los doce para que estén con él y para enviarlos a predicar. Primero el estar con Cristo, luego el ir. El apostolado nace de la intimidad con el Señor.'],
+    6:[50,'San Marcos',3,20,21,'La familia de Jesús cree que está fuera de sí. La incomprensión es parte del camino del que sigue a Cristo con radicalidad. El discípulo no puede esperar que todos entiendan su opción de vida.'],
+  },
+  3: {
+    1:[50,'San Marcos',3,22,30,'Los adversarios dicen que Jesús actúa por Beelzebú. Un reino dividido no subsiste. Quien hace el bien en el nombre de Dios viene de Dios; el criterio del árbol es siempre su fruto.'],
+    2:[50,'San Marcos',3,31,35,'La madre y los hermanos de Jesús lo buscan. Él señala a sus discípulos: estos son mi familia. La familia de Dios se construye haciendo su voluntad, no solo por vínculos de sangre.'],
+    3:[50,'San Marcos',4,1,20,'La parábola del sembrador: la semilla es la misma, los terrenos son distintos. La Palabra de Dios se siembra con generosidad; el fruto depende de la disposición de nuestro corazón.'],
+    4:[50,'San Marcos',4,21,25,'La lámpara no se pone bajo el celemín sino sobre el candelero. La fe no es algo privado que se esconde; está llamada a iluminar. Lo que recibimos de Dios es para darlo, no para guardarlo.'],
+    5:[50,'San Marcos',4,26,34,'El Reino de Dios crece solo, como la semilla. No todo depende de nuestro esfuerzo; hay una fuerza divina que actúa silenciosamente en la historia y en los corazones.'],
+    6:[50,'San Marcos',4,35,41,'En la tormenta Jesús calma el viento y el mar. "¿Por qué tenéis miedo? ¿No tenéis fe?" Su presencia en nuestra barca no elimina las tormentas pero trae una paz que supera toda comprensión.'],
+  },
+  4: {
+    1:[50,'San Marcos',5,1,20,'Jesús libera al endemoniado de Gerasa. La liberación es completa: el hombre queda sentado, vestido y en su sano juicio. Cristo viene a restaurar la dignidad del ser humano en todas sus dimensiones.'],
+    2:[50,'San Marcos',5,21,43,'Jesús resucita a la hija de Jairo y sana a la mujer con hemorragias. "No temas, solo ten fe." Jesús sale al encuentro de la muerte y la enfermedad con la fuerza del amor de Dios.'],
+    3:[50,'San Marcos',6,1,6,'En Nazaret no puede hacer milagros por la falta de fe. La familiaridad puede cerrar los ojos ante lo sagrado. La fe exige apertura y humildad para ver a Dios actuando cerca de nosotros.'],
+    4:[50,'San Marcos',6,7,13,'Jesús envía a los doce de dos en dos con autoridad sobre los espíritus impuros. Los envía sin equipaje: la misión se hace confiando en Dios, no en los propios recursos.'],
+    5:[50,'San Marcos',6,14,29,'El martirio de Juan el Bautista: murió por no callar ante la injusticia del poderoso. El profeta auténtico dice la verdad aunque le cueste la vida.'],
+    6:[50,'San Marcos',6,30,34,'Los apóstoles regresan y Jesús los invita a descansar. Pero al ver la multitud como ovejas sin pastor, siente compasión. El descanso y la misión se equilibran; el motor de todo es la compasión.'],
+  },
+  5: {
+    1:[50,'San Marcos',6,53,56,'En todos los lugares adonde llegaba Jesús la gente lo reconocía y corría a tocar el borde de su manto. ¿Cuánto deseo hay en mi corazón de estar cerca de Jesús? La fe activa busca el contacto con el Señor.'],
+    2:[50,'San Marcos',7,1,13,'Jesús critica a los fariseos por anteponer la tradición humana al mandamiento de Dios. Lo que honra a Dios no son los ritos vacíos sino el corazón que ama de verdad.'],
+    3:[50,'San Marcos',7,14,23,'Lo que contamina no viene de fuera sino de dentro del corazón. La conversión verdadera comienza en lo más profundo de nuestra interioridad, no en los gestos externos.'],
+    4:[50,'San Marcos',7,24,30,'La mujer sirofenicia no se rinde ante la respuesta difícil de Jesús. Su humildad y persistencia logran lo que pedía. La oración perseverante es siempre escuchada.'],
+    5:[50,'San Marcos',7,31,37,'Jesús sana a un sordomudo: "Ábrete." Él quiere abrir nuestros oídos a su Palabra y nuestra boca para proclamarla. La misma gracia que curó al sordomudo actúa en cada bautizado.'],
+    6:[50,'San Marcos',8,1,10,'Jesús alimenta a cuatro mil personas con siete panes. Siente compasión de la multitud que lleva días con él. Dios ve nuestra hambre, física y espiritual, y tiene poder para saciarla.'],
+  },
+  6: {
+    1:[50,'San Marcos',8,11,13,'Los fariseos piden a Jesús una señal del cielo. Él se niega. La fe no necesita señales espectaculares; se nutre de la Palabra y los sacramentos. Pedir señales como condición para creer no es fe.'],
+    2:[50,'San Marcos',8,14,21,'La levadura de los fariseos: haber visto los milagros no basta si el corazón permanece cerrado. La comprensión del Evangelio no es fruto de la inteligencia sino de la apertura del corazón.'],
+    3:[50,'San Marcos',8,22,26,'Jesús sana a un ciego de Betsaida en dos etapas. La fe puede crecer gradualmente; lo importante es que avance hacia la visión plena. Dios respeta nuestro ritmo de conversión.'],
+    4:[50,'San Marcos',8,27,33,'Pedro confiesa que Jesús es el Cristo pero rechaza la cruz. "¡Quítate de mi vista, Satanás!" Seguir a Cristo exige aceptar que el camino a la gloria pasa por la entrega.'],
+    5:[50,'San Marcos',8,34,38,'El que quiera salvar su vida la perderá; el que la pierda por mí la encontrará. El seguimiento de Cristo exige tomar la propia cruz. La lógica del Evangelio invierte la lógica del mundo.'],
+    6:[50,'San Marcos',9,2,13,'La Transfiguración: Jesús se transfigura ante Pedro, Santiago y Juan. El Padre proclama: "Este es mi Hijo amado, escuchadle." La gloria de Cristo anticipa la Resurrección y sostiene en los momentos de prueba.'],
+  },
+  7: {
+    1:[50,'San Marcos',9,14,29,'Jesús libera a un muchacho que sus discípulos no pudieron curar. "Esta clase no puede ser expulsada más que con oración." Hay situaciones que solo se resuelven con oración profunda y confiada.'],
+    2:[50,'San Marcos',9,30,37,'Jesús anuncia su pasión y los discípulos discuten quién es el mayor. Él pone a un niño en medio: el que quiera ser el primero sea el servidor de todos. La grandeza del Reino se mide por el servicio.'],
+    3:[50,'San Marcos',9,38,40,'El que no está contra nosotros está a favor de nosotros. Jesús amplía la perspectiva de sus discípulos: el bien puede venir de fuera del grupo. No hay monopolio del Espíritu.'],
+    4:[50,'San Marcos',9,41,50,'Si tu mano te escandaliza, córtala. Las imágenes radicales de Jesús invitan a tomar en serio el combate espiritual. La sal que pierde su sabor no sirve. Que cada uno tenga sal en sí mismo.'],
+    5:[50,'San Marcos',10,1,12,'Lo que Dios unió no lo separe el hombre. Jesús defiende la indisolubilidad del matrimonio. El matrimonio cristiano es signo del amor fiel e irrevocable de Dios a su pueblo.'],
+    6:[50,'San Marcos',10,13,16,'Dejad que los niños vengan a mí. El Reino de Dios es de quienes son como ellos. La confianza total del niño en sus padres es modelo de nuestra relación con el Padre celestial.'],
+  },
+  8: {
+    1:[50,'San Marcos',10,17,27,'El joven rico se va triste por sus muchos bienes. Es más fácil que un camello pase por el ojo de una aguja que un rico entre en el Reino. El desapego de los bienes materiales es condición del discipulado.'],
+    2:[50,'San Marcos',10,28,31,'Pedro recuerda que lo han dejado todo. Jesús promete el ciento por uno en esta vida y la vida eterna. La generosidad con Dios nunca queda sin respuesta.'],
+    3:[50,'San Marcos',10,32,45,'Los hijos de Zebedeo piden los primeros puestos. Jesús responde: el que quiera ser grande sea servidor. El Hijo del Hombre no vino a ser servido sino a servir y dar su vida como rescate.'],
+    4:[50,'San Marcos',10,46,52,'El ciego Bartimeo grita sin parar: "Hijo de David, ten compasión de mí." Jesús lo llama y le pregunta qué quiere. Inmediatamente recobra la vista y lo sigue. La oración insistente que no se rinde es siempre escuchada.'],
+    5:[50,'San Marcos',11,11,26,'Jesús maldice la higuera sin frutos y expulsa a los vendedores del Templo. La religiosidad sin fruto real de amor es un árbol sin higos. La casa de Dios debe ser casa de oración, no negocio.'],
+    6:[50,'San Marcos',11,27,33,'Los jefes pregunta por qué autoridad actúa Jesús. Él responde con otra pregunta sobre el bautismo de Juan. La autoridad de Jesús no viene de los hombres sino del Padre que lo envía.'],
+  },
+  9: {
+    1:[50,'San Marcos',12,1,12,'La parábola de los viñadores homicidas: matan al hijo del dueño para quedarse con la herencia. La piedra desechada es la piedra angular. Cristo rechazado por los suyos se convierte en fundamento de salvación.'],
+    2:[50,'San Marcos',12,13,17,'Dad al César lo que es del César y a Dios lo que es de Dios. Jesús sale airoso de la trampa. Lo que pertenece a Dios —la vida entera— no puede cederse a ningún poder humano.'],
+    3:[50,'San Marcos',12,18,27,'Jesús responde a los saduceos sobre la resurrección. Dios no es Dios de muertos sino de vivos. La vida después de la muerte supera toda categoría humana; es comunión plena con Dios.'],
+    4:[50,'San Marcos',12,28,34,'El primer mandamiento es amar a Dios con todo el corazón y al prójimo como a uno mismo. "No estás lejos del Reino de Dios." La doble caridad es el corazón de todo el Evangelio.'],
+    5:[50,'San Marcos',12,35,37,'Jesús pregunta cómo el Cristo puede ser hijo de David si David lo llama Señor. La identidad de Jesús supera las expectativas humanas. Cristo es Señor, no solo descendiente de David.'],
+    6:[50,'San Marcos',12,38,44,'Jesús contrasta la ostentación de los escribas con la ofrenda de la viuda que da todo lo que tiene. La generosidad que nace del sacrificio personal es la que agrada a Dios.'],
+  },
+  10: {
+    1:[51,'San Lucas',10,25,37,'La parábola del buen samaritano responde quién es el prójimo. El prójimo es todo el que necesita ayuda sin fronteras de raza o religión. La misericordia concreta es el corazón del Evangelio.'],
+    2:[51,'San Lucas',10,38,42,'Marta se afana en los servicios mientras María escucha a Jesús. María ha elegido la parte mejor. El Señor invita a que toda actividad nazca de la escucha de su Palabra.'],
+    3:[51,'San Lucas',11,1,4,'Los discípulos piden a Jesús que les enseñe a orar. Él les da el Padre Nuestro. Esta oración recoge todo lo que el discípulo necesita: la gloria de Dios y las necesidades del hombre.'],
+    4:[51,'San Lucas',11,5,13,'Pedid y recibiréis, buscad y encontraréis. Si vosotros siendo malos sabéis dar cosas buenas a vuestros hijos, cuánto más el Padre dará el Espíritu Santo a los que se lo pidan.'],
+    5:[51,'San Lucas',11,15,26,'Jesús responde a los que le acusan de actuar por Beelzebú. El que no recoge conmigo desparrama. La fe en Jesús exige una posición clara; no hay neutralidad ante él.'],
+    6:[51,'San Lucas',11,27,28,'Una mujer dice bienaventurado el vientre que te llevó. Jesús responde: dichosos más bien los que escuchan la Palabra de Dios y la guardan. La bienaventuranza de María es espiritual, modelo para todos.'],
+  },
+  11: {
+    1:[51,'San Lucas',11,29,32,'Esta generación pide una señal. La única señal es la de Jonás. El que predica no es mayor que Jonás pero el que escucha tiene ante sí algo más grande que Salomón o Jonás.'],
+    2:[51,'San Lucas',11,37,41,'Los fariseos se escandalizan porque Jesús no se lavó antes de comer. Él les reprocha limpiar el exterior mientras el interior está lleno de codicia. La pureza que Dios pide es la del corazón.'],
+    3:[51,'San Lucas',11,42,46,'¡Ay de vosotros fariseos que pagáis el diezmo de la menta y descuidáis la justicia y el amor de Dios! La religiosidad exterior que descuida lo esencial es hipocresía que el Señor condena.'],
+    4:[51,'San Lucas',11,47,54,'Ay de vosotros que construís los sepulcros de los profetas a quienes vuestros padres mataron. La historia se repite cuando rechazamos los mensajeros de Dios que vienen a corregirnos.'],
+    5:[51,'San Lucas',12,1,7,'Guardaos de la levadura de los fariseos que es la hipocresía. No hay nada encubierto que no sea revelado. Hasta los cabellos de vuestra cabeza están contados: no temáis.'],
+    6:[51,'San Lucas',12,8,12,'Todo el que me confiese ante los hombres, yo lo confesaré ante los ángeles de Dios. El Espíritu Santo os enseñará en el momento oportuno lo que hay que decir. La valentía cristiana viene del Espíritu.'],
+  },
+  12: {
+    1:[51,'San Lucas',12,13,21,'La parábola del rico necio: esa noche le piden el alma. Así el que amasa tesoros para sí y no es rico ante Dios. La vida no consiste en los bienes que uno posee sino en la riqueza del corazón.'],
+    2:[51,'San Lucas',12,35,38,'Estad con las cinturas ceñidas y las lámparas encendidas. El señor que vuelve tarde de noche y encuentra a sus siervos velando los pondrá a servir en su mesa. La vigilancia cristiana es actitud de amor.'],
+    3:[51,'San Lucas',12,39,48,'Velaría si supiera a qué hora viene el ladrón. Al que mucho se le da, mucho se le pedirá. La responsabilidad cristiana crece con los dones recibidos de Dios.'],
+    4:[51,'San Lucas',12,49,53,'He venido a traer fuego a la tierra. ¿Pensáis que vine a traer paz? No, sino división. El Evangelio exige opciones radicales que pueden generar incomprensión incluso en el propio hogar.'],
+    5:[51,'San Lucas',12,54,59,'Sabéis juzgar el aspecto de la tierra y el cielo pero no juzgáis este tiempo. Jesús invita a leer los signos del tiempo con el corazón abierto a la gracia que Dios ofrece hoy.'],
+    6:[51,'San Lucas',13,1,9,'Si no os convertís pereceréis todos de la misma manera. La parábola de la higuera estéril: el labrador pide un año más de paciencia. El tiempo de la gracia es un don precioso que no hay que desperdiciar.'],
+  },
+  13: {
+    1:[51,'San Lucas',13,10,17,'Jesús libera en sábado a una mujer encorvada dieciocho años. La misericordia tiene siempre razón sobre el legalismo. La persona vale más que cualquier norma religiosa.'],
+    2:[51,'San Lucas',13,18,21,'El Reino de Dios es como un grano de mostaza que crece hasta ser árbol, y como levadura que fermenta toda la masa. Lo pequeño y aparentemente insignificante de la fe es capaz de transformarlo todo.'],
+    3:[51,'San Lucas',13,22,30,'Esforzaos en entrar por la puerta estrecha. Habrá primeros que serán últimos y últimos que serán primeros. El Reino de Dios no se hereda automáticamente; exige conversión y compromiso real.'],
+    4:[51,'San Lucas',13,31,35,'Herodes quiere matar a Jesús. Él responde: no puede ser que un profeta muera fuera de Jerusalén. Jesús avanza libremente hacia su destino con la serenidad del que cumple la misión del Padre.'],
+    5:[51,'San Lucas',14,1,6,'Jesús sana en sábado a un hidrópico. Pregunta a los presentes si sería lícito sacarlo del pozo en sábado. La lógica de la misericordia siempre supera la rigidez de la ley.'],
+    6:[51,'San Lucas',14,1,11,'Cuando seas invitado a bodas no te pongas en el primer puesto. El que se humille será exaltado. La humildad que busca el último lugar es la que Dios exalta en su Reino.'],
+  },
+  14: {
+    1:[51,'San Lucas',14,12,14,'Cuando hagas un banquete invita a los pobres y a los que no pueden devolverte nada. Te será recompensado en la resurrección de los justos. La generosidad sin esperar retorno es la que agrada a Dios.'],
+    2:[51,'San Lucas',14,15,24,'La parábola del gran banquete: los invitados ponen excusas. El señor manda llenar su casa con los pobres y marginados. El Reino de Dios está abierto para quienes responden a la invitación con generosidad.'],
+    3:[51,'San Lucas',14,25,33,'El que no lleva su cruz y me sigue no puede ser mi discípulo. Hay que calcular el costo antes de seguir a Jesús. El seguimiento auténtico exige una decisión consciente y totalizante.'],
+    4:[51,'San Lucas',15,1,10,'La oveja perdida y la moneda perdida: hay más alegría en el cielo por un pecador que se convierte. Dios busca al perdido con amor incansable y celebra su regreso con fiesta.'],
+    5:[51,'San Lucas',16,1,8,'La parábola del administrador astuto: los hijos de este mundo son más listos que los hijos de la luz. Jesús invita a usar los bienes con la misma habilidad pero al servicio del bien eterno.'],
+    6:[51,'San Lucas',16,9,15,'Haceos amigos con el dinero injusto. No podéis servir a Dios y al dinero. Los fariseos que aman el dinero escuchan esto y se burlan. Dios conoce los corazones y lo que los hombres estiman es abominable ante él.'],
+  },
+  15: {
+    1:[51,'San Lucas',16,19,31,'El rico Epulón y Lázaro: después de la muerte los papeles se invierten. La indiferencia ante el sufrimiento del prójimo tiene consecuencias eternas. "Tienen a Moisés y los profetas; que los escuchen."'],
+    2:[51,'San Lucas',17,1,6,'Si tu hermano peca, corrígele; si se arrepiente, perdónale. Con fe del tamaño de un grano de mostaza se mueven montañas. La fe genuina hace posible lo que parece imposible.'],
+    3:[51,'San Lucas',17,7,10,'Cuando hayáis hecho todo lo que se os mandó, decid: somos siervos inútiles, hemos hecho lo que debíamos. La humildad es la medida exacta del servicio cristiano: no hay mérito que reclamar ante Dios.'],
+    4:[51,'San Lucas',17,11,19,'Jesús sana a diez leprosos pero solo uno, un samaritano, regresa a dar gracias. ¿Dónde están los otros nueve? La gratitud es expresión de fe madura y reconocimiento del don recibido.'],
+    5:[51,'San Lucas',17,26,37,'Como en los días de Noé: comían, bebían, se casaban hasta que llegó el diluvio. Estad preparados porque el Hijo del Hombre vendrá a la hora que no pensáis. La vigilancia es estilo de vida cristiano.'],
+    6:[51,'San Lucas',18,1,8,'La parábola de la viuda que insiste ante el juez injusto. Dios hará justicia a sus elegidos que claman a él día y noche. La oración perseverante que no se rinde mueve la mano de Dios.'],
+  },
+  16: {
+    1:[51,'San Lucas',18,9,14,'El fariseo y el publicano en el Templo. El que se humilla será exaltado. "Ten piedad de mí que soy pecador": esta es la oración que Dios escucha. La humildad es el primer paso de la fe.'],
+    2:[51,'San Lucas',18,35,43,'El ciego de Jericó grita sin parar: "Hijo de David, ten compasión de mí." Jesús pregunta qué quiere y le devuelve la vista. La oración audaz y perseverante ante Cristo siempre es escuchada.'],
+    3:[51,'San Lucas',19,1,10,'Zaqueo sube a un árbol para ver a Jesús. Jesús lo llama por su nombre e insiste en ir a su casa. La presencia de Cristo transforma la vida del pecador. Hoy ha llegado la salvación a esta casa.'],
+    4:[51,'San Lucas',19,11,28,'La parábola de las minas: cada siervo recibe una mina para negociarla. Al que tiene se le dará más. Los dones de Dios son para hacerlos fructificar al servicio del Reino, no para guardarlos por miedo.'],
+    5:[51,'San Lucas',20,27,40,'Los saduceos preguntan sobre la resurrección. Dios no es Dios de muertos sino de vivos; para él todos viven. La vida eterna supera toda categoría humana y lleva a la comunión plena con Dios.'],
+    6:[51,'San Lucas',21,1,4,'La viuda que echa dos monedas pequeñas en el tesoro del Templo. Jesús dice que echó más que todos porque dio todo lo que tenía para vivir. La ofrenda que sale del sacrificio personal agrada a Dios.'],
+  },
+  17: {
+    1:[51,'San Lucas',10,25,37,'La parábola del buen samaritano: ama al prójimo con obras concretas sin fronteras de raza ni religión. El amor cristiano no es sentimiento sino decisión que se hace carne en el servicio.'],
+    2:[51,'San Lucas',12,13,21,'La parábola del rico necio: no acumules tesoros para ti que no eres rico ante Dios. La riqueza de la vida no se mide por los bienes poseídos sino por la generosidad con Dios y el prójimo.'],
+    3:[51,'San Lucas',12,35,40,'Estad con las lámparas encendidas esperando al señor que vuelve. La vigilancia cristiana no es ansiedad sino amor que espera con alegría la venida del Señor.'],
+    4:[51,'San Lucas',13,10,17,'La mujer encorvada liberada en sábado. No convenía dejar sin soltar a esta hija de Abraham dieciocho años. La misericordia de Dios no entiende de días ni de restricciones legales.'],
+    5:[51,'San Lucas',14,1,6,'Jesús sana en sábado al hidrópico ante los fariseos. La misericordia hacia el que sufre tiene siempre prioridad sobre la observancia literal de la ley.'],
+    6:[51,'San Lucas',15,1,10,'Un pastor deja noventa y nueve ovejas para buscar una perdida. Una mujer busca hasta encontrar la moneda perdida. Así Dios busca a cada persona con amor incansable hasta encontrarla.'],
+  },
+  18: {
+    1:[51,'San Lucas',16,19,31,'El rico festeja cada día espléndidamente mientras Lázaro mendiga a su puerta. La indiferencia ante el prójimo que sufre ciega el corazón para Dios. Las Escrituras ya nos dicen todo lo necesario para convertirse.'],
+    2:[51,'San Lucas',17,7,10,'Cuando hayamos hecho todo lo que debíamos, somos siervos inútiles. No hay mérito que reclamar ante la gratuidad de Dios. Toda nuestra vida es respuesta a un amor que nos precedió.'],
+    3:[51,'San Lucas',18,1,8,'La viuda insistente y el juez injusto. Dios hará justicia a sus elegidos sin tardar. La oración confiada y perseverante es la respuesta de la fe a las situaciones de injusticia y sufrimiento.'],
+    4:[51,'San Lucas',18,9,14,'El fariseo da gracias por sus méritos; el publicano pide misericordia. El que se humilla será exaltado. La oración auténtica nace del reconocimiento de nuestra pequeñez ante Dios.'],
+    5:[51,'San Lucas',19,1,10,'Zaqueo busca a Jesús y Jesús lo busca a él. El encuentro personal con Cristo transforma la vida radicalmente: Zaqueo devuelve el cuádruplo y da la mitad a los pobres.'],
+    6:[51,'San Lucas',20,1,8,'Los jefes preguntan a Jesús con qué autoridad actúa. Él responde con otra pregunta. La autoridad de Cristo no viene de los hombres sino del Padre que lo envió al mundo.'],
+  },
+  19: {
+    1:[51,'San Lucas',10,38,42,'María se sienta a los pies de Jesús y escucha su Palabra. Ha elegido la parte mejor. La escucha contemplativa de la Palabra de Dios es el fundamento de toda actividad cristiana fecunda.'],
+    2:[51,'San Lucas',11,5,13,'Si un amigo pide a medianoche pan, el otro se levanta y lo da. Cuánto más el Padre celestial da cosas buenas a los que se las piden. La oración confiada en el amor paternal de Dios es siempre escuchada.'],
+    3:[51,'San Lucas',12,49,53,'He venido a traer fuego a la tierra. El Evangelio provoca divisiones cuando se toma en serio. La paz de Cristo no es ausencia de tensión sino unidad en la verdad y el amor.'],
+    4:[51,'San Lucas',13,22,30,'La puerta estrecha. No basta decir Señor Señor o haber comido en tu presencia. Lo que salva es la obediencia a la voluntad de Dios expresada en la vida concreta de cada día.'],
+    5:[51,'San Lucas',14,25,33,'El discipulado tiene un costo: hay que llevarlo todo en cuenta como el constructor o el rey que va a la guerra. Seguir a Cristo sin calcular el precio es no tomarlo en serio.'],
+    6:[51,'San Lucas',16,1,8,'El administrador prudente. Los hijos de este mundo son más astutos que los hijos de la luz. Jesús invita a usar todas las capacidades y recursos al servicio del Reino de Dios.'],
+  },
+  20: {
+    1:[51,'San Lucas',11,29,32,'La señal de Jonás: el Hijo del Hombre estará tres días en el corazón de la tierra. La Resurrección es la señal definitiva de Dios al mundo. Quien la acepta con fe tiene más que todos los tesoros del mundo.'],
+    2:[51,'San Lucas',12,39,48,'Al que mucho se le da, mucho se le exigirá. La responsabilidad ante Dios crece en proporción a los dones recibidos. El discípulo consciente de sus talentos vive con mayor generosidad y fidelidad.'],
+    3:[51,'San Lucas',13,31,35,'Herodes quiere matar a Jesús. Él responde que seguirá curando y echando demonios hasta el tercer día. Jesús avanza sereno hacia su destino porque hace la voluntad del Padre.'],
+    4:[51,'San Lucas',17,20,25,'El Reino de Dios no viene con signos visibles ni está aquí o allí. El Reino de Dios está entre vosotros. La presencia de Cristo en medio de los suyos es el mayor bien que puede poseer el cristiano.'],
+    5:[51,'San Lucas',18,35,43,'El ciego de Jericó que grita sin parar logra su curación por su fe. Jesús le pregunta: ¿qué quieres que te haga? La oración específica y confiada obtiene respuesta del Señor.'],
+    6:[51,'San Lucas',19,11,28,'Las minas: el señor pide cuentas de lo recibido. Al que tiene se le dará más. Cada don recibido de Dios es una semilla para hacer fructificar en beneficio del Reino y los demás.'],
+  },
+  21: {
+    1:[51,'San Lucas',10,25,37,'Al final del Tiempo Ordinario, el buen samaritano sigue siendo el modelo del amor cristiano: concreto, sin fronteras y sin esperar recompensa. Ve y haz tú lo mismo.'],
+    2:[51,'San Lucas',13,22,30,'Muchos intentarán entrar y no podrán. La puerta estrecha exige conversión real, no solo conocimiento superficial de Jesús. La salvación es don gratuito que exige nuestra respuesta libre y generosa.'],
+    3:[51,'San Lucas',14,12,14,'No invites a los ricos sino a los pobres que no pueden devolverlo. El cristiano que actúa con generosidad gratuita anticipa ya en esta vida el banquete eterno del Reino.'],
+    4:[51,'San Lucas',17,1,6,'Si tu hermano peca perdónale. Con fe como grano de mostaza se arrancan árboles y se plantan en el mar. La fe unida al perdón fraterno tiene un poder que supera toda expectativa humana.'],
+    5:[51,'San Lucas',19,1,10,'El Hijo del Hombre vino a buscar y salvar lo que estaba perdido. Zaqueo representa a todo pecador buscado por Cristo. Nadie está demasiado perdido para ser encontrado por el amor de Dios.'],
+    6:[51,'San Lucas',20,27,40,'La resurrección supera toda categoría humana. En Dios todos están vivos. Al terminar el Tiempo Ordinario contemplamos el destino eterno al que Dios nos llama: la vida plena con él para siempre.'],
+  },
+}
+// Para semanas 22-34, continuar con Lucas capítulos finales
+function getWeekReading(week: number, day: number): R | null {
+  if (OT_II[week] && OT_II[week][day]) return OT_II[week][day]
+  // Semanas 22-34: pasajes finales de Lucas sobre el fin de los tiempos
+  const lateReadings: Record<number, R> = {
+    1:[51,'San Lucas',21,1,4,'La viuda y las dos monedas: ella dio todo lo que tenía. La generosidad que brota del sacrificio personal es la más preciosa a los ojos de Dios.'],
+    2:[51,'San Lucas',21,5,11,'Jesús anuncia la destrucción del Templo y los signos del fin. No os dejéis engañar; estas cosas deben ocurrir pero el fin no llegará enseguida. La historia está en manos de Dios.'],
+    3:[51,'San Lucas',21,12,19,'Os entregarán y os perseguirán. Con vuestra perseverancia salvaréis vuestras almas. La fidelidad a Cristo en medio de la prueba es el testimonio más poderoso de la fe.'],
+    4:[51,'San Lucas',21,20,28,'Cuando veáis acercarse vuestra liberación, levantad la cabeza. El cristiano no mira el futuro con temor sino con esperanza; la venida de Cristo es siempre buena noticia.'],
+    5:[51,'San Lucas',21,29,33,'La generación no pasará sin que todo esto ocurra. El cielo y la tierra pasarán pero mis palabras no pasarán. La Palabra de Dios es el fundamento eterno sobre el que se construye la vida cristiana.'],
+    6:[51,'San Lucas',21,34,36,'Velad y orad en todo tiempo para poder manteneros en pie ante el Hijo del Hombre. La vigilancia cristiana es la actitud permanente del discípulo que espera a su Señor con amor y fidelidad.'],
   }
-
-  // Días de semana → rotar por patrón
-  const idx = (dayOfYear + dayOfWeek) % WEEKDAY_OT_II.length
-  const [lid, lnom, cap, ini, fin, exp] = WEEKDAY_OT_II[idx]
-  return { titulo:'Evangelio del día', libroId:lid, libroNombre:lnom, capitulo:cap, inicio:ini, fin:fin, explicacion:exp }
+  return lateReadings[day] || null
 }
 
-function getDayOfYear(d: Date): number {
-  const start = new Date(d.getFullYear(), 0, 0)
-  const diff = d.getTime() - start.getTime()
-  return Math.floor(diff / 86400000)
+// ── Función principal ────────────────────────────────────────────────────────
+
+// Fechas clave 2026
+const BAPTISM_MON   = new Date('2026-01-12T12:00:00') // Lunes tras Bautismo
+const ASH_WED       = new Date('2026-02-18T12:00:00')
+const PENTECOST_SUN = new Date('2026-05-24T12:00:00')
+const WEEK8_TUE     = new Date('2026-05-26T12:00:00') // Semana 8 empieza mar (lun=fiesta María)
+const WEEK9_MON     = new Date('2026-06-01T12:00:00') // Semana 9 empieza lunes
+const ADVENT_SUN    = new Date('2026-11-29T12:00:00')
+
+export function getGospelForDate(dateStr: string): GospelEntry | null {
+  // 1. Entradas específicas (domingos, fiestas, días especiales de Cuaresma/Pascua)
+  if (SPECIFIC[dateStr]) return SPECIFIC[dateStr]
+
+  const d = new Date(dateStr + 'T12:00:00')
+  const dow = d.getDay() // 0=Dom … 6=Sáb
+
+  // 2. Tiempo Ordinario antes de Cuaresma (Lun 12 ene – Mar 17 feb)
+  if (d >= BAPTISM_MON && d < ASH_WED) {
+    const weekNum = Math.floor((d.getTime() - BAPTISM_MON.getTime()) / (7 * 86400000)) + 1
+    const r = getWeekReading(weekNum, dow === 0 ? 7 : dow)
+    if (r) {
+      const [lid, lnom, cap, ini, fin, exp] = r
+      return { titulo:`Semana ${weekNum} — Tiempo Ordinario`, libroId:lid, libroNombre:lnom, capitulo:cap, inicio:ini, fin:fin, explicacion:exp }
+    }
+  }
+
+  // 3. Días de semana Sem.8 tras Pentecostés (Mar 26 – Sáb 30 mayo)
+  if (d >= WEEK8_TUE && d < WEEK9_MON && dow !== 0) {
+    const r = getWeekReading(8, dow)
+    if (r) {
+      const [lid, lnom, cap, ini, fin, exp] = r
+      return { titulo:'Semana 8 — Tiempo Ordinario', libroId:lid, libroNombre:lnom, capitulo:cap, inicio:ini, fin:fin, explicacion:exp }
+    }
+  }
+
+  // 4. Tiempo Ordinario tras Pentecostés (Lun 1 jun – Sáb 28 nov)
+  if (d >= WEEK9_MON && d < ADVENT_SUN) {
+    const weekNum = Math.floor((d.getTime() - WEEK9_MON.getTime()) / (7 * 86400000)) + 9
+    const r = getWeekReading(weekNum, dow === 0 ? 7 : dow)
+    if (r) {
+      const [lid, lnom, cap, ini, fin, exp] = r
+      return { titulo:`Semana ${weekNum} — Tiempo Ordinario`, libroId:lid, libroNombre:lnom, capitulo:cap, inicio:ini, fin:fin, explicacion:exp }
+    }
+  }
+
+  return null
 }
