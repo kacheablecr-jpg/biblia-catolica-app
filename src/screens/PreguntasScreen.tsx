@@ -1442,6 +1442,62 @@ const PREGUNTAS: Pregunta[] = [
     mensaje:
       'No necesitás entender la Trinidad para relacionarte con Dios — igual que no necesitás entender cómo funciona el amor para amar. Pero cuando empezás a entenderla, algo cambia: Dios deja de ser una fuerza solitaria en el cielo y se convierte en una comunidad de amor que te invita adentro. Esa es la invitación más extraordinaria que existe.',
   },
+  {
+    id:        '36',
+    emoji:     '🛡️',
+    categoria: 'Fe y vida cotidiana',
+    pregunta:  '¿Qué dice la Biblia sobre cómo el diablo puede influenciarnos?',
+    intro:
+      'La Biblia no ignora al diablo ni lo exagera. Le da un nombre, una estrategia y un límite. Entender cómo actúa no es para tenerle miedo — es para no ser sorprendido.',
+    puntos: [
+      {
+        titulo: 'Tienta usando lo que ya está en nosotros',
+        texto:
+          'En el desierto, el diablo tentó a Jesús tres veces: con hambre, con orgullo y con poder. En el Génesis, tentó a Eva distorsionando lo que Dios había dicho: "¿Conque Dios os ha dicho...?" La tentación siempre empieza como una pregunta, una duda, una posibilidad. No crea el deseo desde cero — lo amplifica, lo disfraza, lo hace parecer razonable.',
+        cita: '«Cuando alguno es tentado, no diga que es tentado de parte de Dios... sino que cada uno es tentado cuando de su propia concupiscencia es atraído.»\n— Santiago 1:13-14',
+      },
+      {
+        titulo: 'Miente y falsifica la realidad',
+        texto:
+          'Jesús lo llama "mentiroso y padre de mentira" y dice que "no hay verdad en él". El diablo no necesita inventar cosas completamente falsas — le basta con mezclar verdad con mentira, exagerar un miedo, minimizar una consecuencia. Su mentira más efectiva puede ser hacerte creer que eres lo peor, que no hay perdón, que Dios no te escucha.',
+        cita: '«El diablo... ha sido homicida desde el principio y no ha permanecido en la verdad.»\n— Juan 8:44',
+      },
+      {
+        titulo: 'Acusa sin parar',
+        texto:
+          'El nombre "Satanás" en hebreo significa "el acusador". En Job aparece ante Dios acusando al hombre. Esta es la voz interior que repite: "No vales nada", "Eso que hiciste no tiene perdón", "Dios no puede amarte así". La acusación busca paralizar, no corregir. Dios convence para el bien; el diablo acusa para destruir.',
+        cita: '«El acusador de nuestros hermanos... los acusaba delante de nuestro Dios día y noche.»\n— Apocalipsis 12:10',
+      },
+      {
+        titulo: 'Se disfraza de algo bueno',
+        texto:
+          'Uno de los pasajes más importantes y menos conocidos: "el mismo Satanás se disfraza como ángel de luz". No siempre llega como tentación obvia. A veces llega disfrazado de filosofía razonable, de religiosidad vacía, de "amor propio" que en realidad es orgullo. Por eso la Biblia insiste en discernir y probar los espíritus.',
+        cita: '«El mismo Satanás se disfraza como ángel de luz.»\n— 2 Corintios 11:14',
+      },
+      {
+        titulo: 'Ciega la mente para que no vea la verdad',
+        texto:
+          'Pablo dice que "el dios de este siglo cegó el entendimiento de los incrédulos". No necesita convertirte en malvado — le basta con mantenerte distraído, ocupado, indiferente. La ceguera espiritual no duele como un pecado grave; es silenciosa: simplemente no ves la realidad de Dios aunque esté frente a ti.',
+        cita: '«El dios de este siglo cegó el entendimiento de los incrédulos, para que no les resplandezca la luz del evangelio.»\n— 2 Corintios 4:4',
+      },
+      {
+        titulo: 'Busca el momento de debilidad',
+        texto:
+          '"Como león rugiente, anda alrededor buscando a quien devorar." Un león no ataca de frente a una manada — espera al que se alejó, al que está solo, al que está herido. El diablo actúa igual: en el cansancio, el dolor, el aislamiento. No es casualidad que las mayores tentaciones lleguen cuando estamos solos o agotados.',
+        cita: '«Sed sobrios y velad; porque vuestro adversario el diablo, como león rugiente, anda alrededor buscando a quien devorar.»\n— 1 Pedro 5:8',
+      },
+      {
+        titulo: 'Pero tiene límites que no puede cruzar sin permiso',
+        texto:
+          'El libro de Job lo muestra claramente: el diablo no puede tocar a Job sin autorización expresa de Dios. En Lucas 22:31, Jesús dice a Pedro: "Satanás os ha pedido para zarandearos." Pedir permiso implica que no tiene poder absoluto. Y Jesús ya lo venció: "El príncipe de este mundo ha sido juzgado." La cruz fue su derrota definitiva.',
+        cita: '«Resistid al diablo, y huirá de vosotros.»\n— Santiago 4:7',
+      },
+    ],
+    conclusion:
+      'El diablo no crea nada nuevo — distorsiona, miente, acusa, ciega y espera el momento débil. Actúa desde las sombras, no desde el poder. Pero tiene un límite claro: no puede forzar. Solo puede sugerir. Y ya fue vencido por Cristo en la cruz. El cristiano no pelea para ganar — pelea desde una victoria ya ganada.',
+    mensaje:
+      'El miedo al diablo es exactamente lo que él quiere. La Biblia no lo pinta como omnipotente — lo pinta como vencido. "Mayor es el que está en vosotros que el que está en el mundo" (1Jn 4:4). Conocer sus estrategias no es paranoia — es no ser ingenuo. Y la respuesta de la Biblia es sencilla: resistid, y huirá.',
+  },
 ]
 
 function buildTexto(p: Pregunta): string {
