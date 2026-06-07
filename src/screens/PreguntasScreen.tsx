@@ -1498,6 +1498,218 @@ const PREGUNTAS: Pregunta[] = [
     mensaje:
       'El miedo al diablo es exactamente lo que él quiere. La Biblia no lo pinta como omnipotente — lo pinta como vencido. "Mayor es el que está en vosotros que el que está en el mundo" (1Jn 4:4). Conocer sus estrategias no es paranoia — es no ser ingenuo. Y la respuesta de la Biblia es sencilla: resistid, y huirá.',
   },
+  {
+    id:        '37',
+    emoji:     '🍷',
+    categoria: 'Liturgia y sacramentos',
+    pregunta:  '¿Por qué solo nos dan la hostia y no el vino si Jesús dijo "beban mi sangre"?',
+    intro:
+      'En Juan 6, Jesús dijo claramente: "Beban mi sangre." Pero en la mayoría de las misas el pueblo recibe solo la hostia. ¿Es esto una contradicción o una incomplitud?',
+    puntos: [
+      {
+        titulo: 'La doctrina de la concomitancia',
+        texto:
+          'La Iglesia Católica enseña que cuando el sacerdote consagra la hostia, esta se convierte en Cristo completo: cuerpo, sangre, alma y divinidad — no solo en su "cuerpo". Lo mismo ocurre con el vino. Esto significa que al recibir la hostia sola ya se recibe al Cristo entero, incluyendo su sangre.',
+        cita: '«El que come mi carne y bebe mi sangre tiene vida eterna.»\n— Juan 6:54',
+      },
+      {
+        titulo: 'Juan 6:51 — solo el pan ya da vida eterna',
+        texto:
+          'En el mismo capítulo donde Jesús exige beber su sangre, también dice: "Si alguien come de este pan, vivirá para siempre." Jesús mismo presenta el pan solo como suficiente para la vida eterna. La Iglesia interpreta esto a la luz de la concomitancia: bajo cada especie está el Cristo entero.',
+        cita: '«Yo soy el pan vivo que bajó del cielo. Si alguien come de este pan, vivirá para siempre.»\n— Juan 6:51',
+      },
+      {
+        titulo: 'Historia: la Iglesia primitiva sí daba los dos',
+        texto:
+          'En los primeros siglos, los fieles recibían tanto el pan como el vino. Con el tiempo, por razones prácticas — riesgo de derramar la Sangre consagrada, higiene, dificultad logística con grandes congregaciones — la Iglesia occidental fue reservando el cáliz solo para el sacerdote.',
+      },
+      {
+        titulo: 'El sacerdote siempre comulga bajo las dos especies',
+        texto:
+          'En cada misa, el sacerdote consagra y recibe tanto el pan como el vino. El signo completo de la Eucaristía siempre está presente en el altar. El pueblo recibe a Cristo entero en la hostia; el sacerdote hace visible el signo completo de las dos especies.',
+      },
+      {
+        titulo: 'El Vaticano II restauró la comunión del cáliz',
+        texto:
+          'El Concilio Vaticano II (años 60) recuperó la opción de dar el cáliz a los fieles en celebraciones especiales: bodas, bautismos, primera comunión, Vigilia Pascual. En muchas parroquias del mundo se ofrece el cáliz regularmente. No es una práctica prohibida — es una opción litúrgica.',
+      },
+    ],
+    conclusion:
+      'No recibir el vino no significa recibir una Eucaristía incompleta. La doctrina de la concomitancia enseña que el Cristo entero — cuerpo y sangre — está presente bajo cada especie. El signo completo siempre está en el altar en la persona del sacerdote. El Vaticano II reintrodujo la opción del cáliz para los fieles, y hoy se usa en muchas celebraciones.',
+    mensaje:
+      'Cuando recibes la hostia, no recibes una parte de Cristo — lo recibes a Él completo. La Eucaristía no es un símbolo dividido en dos piezas: es una persona. Y esa persona te recibe a ti entero también: con tus dudas, tus heridas y tu historia.',
+  },
+  {
+    id:        '38',
+    emoji:     '🌌',
+    categoria: 'Fe y ciencia',
+    pregunta:  '¿Dice la Biblia algo sobre vida en otros planetas?',
+    intro:
+      'Con miles de millones de galaxias y planetas en el universo, la pregunta sobre vida extraterrestre es inevitable. ¿Qué dice — o qué calla — la Biblia sobre esto?',
+    puntos: [
+      {
+        titulo: 'La Biblia no lo menciona directamente',
+        texto:
+          'En toda la Biblia no hay un solo versículo que hable de seres inteligentes en otros planetas. El texto bíblico está centrado en la relación entre Dios y la humanidad en la Tierra. Su silencio sobre vida extraterrestre no es una negación — simplemente no es el tema.',
+      },
+      {
+        titulo: 'El universo como declaración de la gloria de Dios',
+        texto:
+          'El Salmo 19 dice que los cielos proclaman la gloria de Dios. El universo entero — con sus cientos de miles de millones de galaxias — es presentado en la Biblia como obra de las manos de Dios, no como escenario accidental. Si existe vida en otros lugares, sería también obra suya.',
+        cita: '«Los cielos cuentan la gloria de Dios, el firmamento proclama la obra de sus manos.»\n— Salmo 19:1',
+      },
+      {
+        titulo: 'Colosenses 1:16 — todo fue creado por Cristo',
+        texto:
+          'Pablo escribe que en Cristo fueron creadas "todas las cosas, tanto en los cielos como en la tierra, visibles e invisibles." Si existen formas de vida en otros lugares del universo, también habrían sido creadas por Aquel en quien existe todo.',
+        cita: '«Porque en él fueron creadas todas las cosas, las que hay en los cielos y las que hay en la tierra.»\n— Colosenses 1:16',
+      },
+      {
+        titulo: '"Otras ovejas que no son de este redil"',
+        texto:
+          'Jesús dijo: "Tengo otras ovejas que no son de este redil." La frase se refiere principalmente a los gentiles (no judíos), pero algunos teólogos han señalado que abre la posibilidad de que el plan redentor de Dios sea más vasto de lo que imaginamos.',
+        cita: '«Tengo además otras ovejas que no son de este redil; aquellas también debo traer.»\n— Juan 10:16',
+      },
+      {
+        titulo: 'El silencio bíblico no es negación',
+        texto:
+          'La Biblia no habla de electrones, de bacterias ni de galaxias espirales, y nadie concluye de eso que no existen. El texto sagrado no es un libro de astronomía ni de biología — es la historia de la relación de Dios con la humanidad. Su silencio sobre vida extraterrestre no la descarta.',
+      },
+    ],
+    conclusion:
+      'La Biblia no confirma ni niega la existencia de vida en otros planetas. Simplemente no es su tema. Lo que sí afirma es que todo lo que existe fue creado por Dios y para Dios. Si hay vida inteligente en otros rincones del universo, también sería obra del mismo Creador. La fe cristiana no necesita que la Tierra sea el único planeta con vida para ser verdad.',
+    mensaje:
+      'El universo tiene cientos de miles de millones de galaxias, y en cada una de ellas Dios es Señor. Lo que la Biblia afirma no es que la Tierra es el centro del universo — es que tú eres el centro de su amor. Frente a toda esa inmensidad, Dios te conoce por nombre.',
+  },
+  {
+    id:        '39',
+    emoji:     '✨',
+    categoria: 'Fe y ciencia',
+    pregunta:  '¿Qué dice la Biblia sobre el universo, los planetas y las galaxias?',
+    intro:
+      'La Biblia fue escrita mucho antes de que existieran los telescopios. Pero habla del cosmos con una perspectiva que sigue siendo asombrosa.',
+    puntos: [
+      {
+        titulo: 'Génesis 1:1 — "los cielos y la tierra"',
+        texto:
+          'La primera frase de la Biblia usa la expresión hebrea "shamayim va\'aretz" — los cielos y la tierra — que en el idioma original es una forma de decir "todo lo que existe", el equivalente de lo que hoy llamamos el universo. La Biblia no dice que Dios creó solo la Tierra: dice que creó todo.',
+        cita: '«En el principio, Dios creó los cielos y la tierra.»\n— Génesis 1:1',
+      },
+      {
+        titulo: 'Salmo 8 — la inmensidad del cosmos y la pequeñez del hombre',
+        texto:
+          'El Salmo 8 es quizás la reflexión más profunda de la Biblia sobre la relación entre el ser humano y el cosmos. El salmista mira los cielos, la luna y las estrellas, y se pregunta: ¿por qué Dios se acuerda del hombre frente a tanta inmensidad? Y la respuesta que da es sorprendente: porque lo coronó de gloria.',
+        cita: '«Cuando contemplo tus cielos, la luna y las estrellas que tú pusiste, ¿qué es el hombre para que tengas de él memoria?»\n— Salmo 8:3-4',
+      },
+      {
+        titulo: 'Isaías 40:26 — Dios cuenta las estrellas',
+        texto:
+          'Isaías describe a un Dios que conoce cada estrella por nombre. Hoy sabemos que existen aproximadamente 200 mil millones de estrellas solo en nuestra galaxia, y hay cientos de miles de millones de galaxias. El texto no es astronomía — es asombro teológico.',
+        cita: '«Levanten los ojos y miren: ¿quién creó todo esto? Él saca y cuenta su ejército de estrellas; a todas las llama por nombre.»\n— Isaías 40:26',
+      },
+      {
+        titulo: 'Job 38 — Dios pregunta desde el cosmos',
+        texto:
+          'En Job 38, Dios le responde a Job desde un torbellino y le hace preguntas sobre la creación: "¿Dónde estabas cuando puse los fundamentos de la tierra? ¿Puedes atar las Pléyades o soltar el cinturón de Orión?" El cosmos es presentado como argumento de la grandeza de Dios.',
+        cita: '«¿Puedes atar las cadenas de las Pléyades, o soltar el cinturón de Orión?»\n— Job 38:31',
+      },
+      {
+        titulo: 'El universo no es el fin — es el escenario',
+        texto:
+          'Para la Biblia, el universo no existe para ser adorado ni es el fin último de nada — es el escenario donde Dios despliega su gloria y donde los seres humanos son llamados a relacionarse con Él. El cosmos no es rival de Dios: es su obra.',
+        cita: '«Los cielos son los cielos del Señor; pero la tierra la dio a los hijos de los hombres.»\n— Salmo 115:16',
+      },
+    ],
+    conclusion:
+      'La Biblia no explica la física del cosmos ni la formación de galaxias — ese no es su propósito. Pero sí habla del universo como creación de Dios, como declaración de su grandeza, y como contexto donde el ser humano — pequeño frente a la inmensidad — es sin embargo lo más amado. La Biblia no teme la enormidad del cosmos: la celebra como firma del Creador.',
+    mensaje:
+      'Frente a un universo de 93 mil millones de años luz de diámetro, la Biblia dice algo radical: Dios te conoce a ti. Cada estrella de Isaías 40 tiene nombre, y el tuyo también lo sabe. La inmensidad del cosmos no te hace insignificante — hace más asombroso que seas amado.',
+  },
+  {
+    id:        '40',
+    emoji:     '💍',
+    categoria: 'Fe y vida cotidiana',
+    pregunta:  '¿Qué dice la Biblia sobre usar anillos, esclavas y cadenas?',
+    intro:
+      'Las joyas y adornos aparecen en la Biblia más veces de lo que mucha gente cree. La respuesta no es una prohibición simple — es mucho más matizada.',
+    puntos: [
+      {
+        titulo: 'Las joyas en el Antiguo Testamento: símbolo de honor',
+        texto:
+          'En el Génesis, el siervo de Abraham le regaló a Rebeca una argolla de oro para la nariz y brazaletes como señal de honor. En la parábola del hijo pródigo, el padre corre hacia su hijo y le pone un anillo — símbolo de restauración de dignidad. Las joyas en la Biblia frecuentemente representan honor, amor y pertenencia.',
+        cita: '«El hombre sacó un pendiente de oro que pesaba medio siclo, y dos brazaletes para ella.»\n— Génesis 24:22',
+      },
+      {
+        titulo: 'Ezequiel 16 — Dios mismo adorna a Israel con joyas',
+        texto:
+          'En una de las imágenes más sorprendentes del profeta Ezequiel, Dios describe cómo adornó a Israel con pulseras, collares y corona de oro. Las joyas son el lenguaje del amor de Dios hacia su pueblo. No hay condena implícita en el adorno en sí.',
+        cita: '«Te adornaste con oro y plata; tus vestidos eran de lino fino, seda y bordado.»\n— Ezequiel 16:13',
+      },
+      {
+        titulo: 'La advertencia del Nuevo Testamento: no sea lo exterior lo principal',
+        texto:
+          'Pablo y Pedro no prohíben las joyas, pero sí advierten contra hacer del adorno externo la fuente de identidad o valor. La belleza que importa para Dios no es la que se compra en una joyería.',
+        cita: '«Vuestro atavío no sea el externo: peinados ostentosos, adornos de oro o vestidos lujosos. Sino el interno, el del corazón.»\n— 1 Pedro 3:3-4',
+      },
+      {
+        titulo: 'Santiago 5 — advertencia contra el lujo ostentoso',
+        texto:
+          'Santiago sí reprende el lujo acumulado por los ricos que oprimen a otros. No es una condena de las joyas como objeto, sino de la acumulación injusta y del uso del adorno como símbolo de poder sobre el pobre.',
+        cita: '«Vosotros los ricos, llorad y aullad por las miserias que os vendrán... vuestro oro y plata están enmohecidos.»\n— Santiago 5:1-3',
+      },
+      {
+        titulo: '¿Es pecado usar joyas?',
+        texto:
+          'La Biblia no lo condena. Lo que sí pregunta es: ¿de dónde viene tu valor? ¿Del anillo que llevas o de la persona que eres? El adorno externo no es malo; convertirlo en tu identidad sí lo es. La distinción bíblica no es entre con joyas y sin joyas — es entre corazón centrado en Dios y corazón centrado en la apariencia.',
+      },
+    ],
+    conclusion:
+      'La Biblia no prohíbe los anillos, las esclavas ni las cadenas. Las joyas aparecen como símbolo de honor, amor y dignidad en el Antiguo Testamento. El Nuevo Testamento advierte que la belleza exterior no debe ser lo que define a la persona — pero eso es muy diferente a una prohibición. Lo que importa es el corazón, no el adorno.',
+    mensaje:
+      'Puedes usar o no usar joyas con plena libertad cristiana. Lo que Dios mira no es tu muñeca ni tu cuello — es tu corazón. La pregunta bíblica no es "¿llevas pulsera?" sino "¿qué te hace sentir valioso?" Si la respuesta no es el amor de Dios, eso sí merece reflexión.',
+  },
+  {
+    id:        '41',
+    emoji:     '⚡',
+    categoria: 'Fe y vida cotidiana',
+    pregunta:  '¿Qué dice la Biblia sobre usar símbolos nórdicos como el Mjölnir, runas o el Valknut?',
+    intro:
+      'El martillo de Thor, las runas vikingas y el Valknut son cada vez más comunes como accesorios o tatuajes. ¿Qué dice la Biblia sobre usarlos? La respuesta depende de una distinción importante.',
+    puntos: [
+      {
+        titulo: 'El contexto bíblico: advertencia contra los símbolos de otros dioses',
+        texto:
+          'El Deuteronomio y varios profetas advierten reiteradamente contra adoptar las prácticas religiosas de otros pueblos — incluyendo sus símbolos sagrados. La preocupación no era cultural sino espiritual: que el corazón se fuera detrás de otros dioses.',
+        cita: '«No harás como hacen en Egipto... ni como hacen en la tierra de Canaán.»\n— Levítico 18:3',
+      },
+      {
+        titulo: 'La distinción clave: ¿símbolo cultural o símbolo religioso?',
+        texto:
+          'El Mjölnir era originalmente un símbolo religioso vikingo — el martillo del dios Thor, asociado a la protección y al poder divino pagano. Hoy, mucha gente lo usa como símbolo cultural, estético o de herencia nórdica, sin ninguna intención espiritual. La Biblia no prohíbe la cultura nórdica — advierte contra la adoración a otros dioses.',
+      },
+      {
+        titulo: 'El principio de la conciencia — 1 Corintios 8',
+        texto:
+          'Pablo abordó una situación similar con la carne sacrificada a ídolos. Su principio: el ídolo no es nada, pero si al usarlo tu conciencia te dice que estás honrando algo que no es Dios — o si tu ejemplo lleva a otro a hacer eso — entonces vale más abstenerse. La conciencia es el árbitro, no la forma del objeto.',
+        cita: '«Pero no en todos hay este conocimiento; algunos... comen como si fuera sacrificado a ídolos, y su conciencia, siendo débil, se contamina.»\n— 1 Corintios 8:7',
+      },
+      {
+        titulo: 'El Valknut — un caso más delicado',
+        texto:
+          'El Valknut (tres triángulos entrelazados) está específicamente asociado en la mitología nórdica con Odín y con los muertos en batalla. A diferencia del Mjölnir, que muchos usan sin connotación religiosa, el Valknut tiene una asociación espiritual más directa con la muerte y el mundo de los espíritus. Aquí la prudencia bíblica pediría más reflexión.',
+      },
+      {
+        titulo: '¿A quién sirve tu corazón?',
+        texto:
+          'La pregunta más honesta no es "¿está prohibido este símbolo?" sino "¿a quién sirve mi corazón cuando lo uso?" Si el símbolo es puramente estético y tu fe está firme en Cristo, la Biblia da libertad. Si genera confusión en otros sobre tu fe, o si en tu propia conciencia hay alguna lealtad mezclada, eso merece atención.',
+        cita: '«Todo lo que no proviene de fe, es pecado.»\n— Romanos 14:23',
+      },
+    ],
+    conclusion:
+      'La Biblia no menciona el Mjölnir ni las runas, pero sí da principios claros: evitar lo que es explícitamente religioso hacia otros dioses, y dejarse guiar por la conciencia cuando el uso es cultural. La distinción entre símbolo cultural y símbolo espiritual es real y relevante. Lo que la Biblia siempre pregunta es: ¿a quién sirves?',
+    mensaje:
+      'La libertad cristiana es real — puedes vivir en el mundo sin huirle a su cultura. Pero esa libertad tiene una brújula: ¿sirve esto a mi fe o la confunde? La pregunta no es "¿está en la lista de cosas prohibidas?" sino "¿señala hacia Cristo o me aleja de Él?"',
+  },
 ]
 
 function buildTexto(p: Pregunta): string {
