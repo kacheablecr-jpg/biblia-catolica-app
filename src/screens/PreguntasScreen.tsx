@@ -1710,6 +1710,50 @@ const PREGUNTAS: Pregunta[] = [
     mensaje:
       'La libertad cristiana es real — puedes vivir en el mundo sin huirle a su cultura. Pero esa libertad tiene una brújula: ¿sirve esto a mi fe o la confunde? La pregunta no es "¿está en la lista de cosas prohibidas?" sino "¿señala hacia Cristo o me aleja de Él?"',
   },
+  {
+    id:        '42',
+    emoji:     '👶',
+    categoria: 'Jesús',
+    pregunta:  '¿Por qué Dios permitió que Herodes mandara a matar a los niños?',
+    intro:
+      'Es una de las preguntas más difíciles del Nuevo Testamento. Si Dios es bueno y todopoderoso, ¿por qué dejó que Herodes asesinara a niños inocentes buscando al recién nacido rey? La respuesta tiene más capas de las que parece.',
+    puntos: [
+      {
+        titulo: 'Dios actuó antes del crimen — y protegió al niño',
+        texto:
+          'Antes de que Herodes diera la orden, Dios ya había actuado. Envió un ángel a José con instrucciones claras: huye a Egipto antes de que lleguen los soldados. Dios no fue indiferente ni ausente — intervino para proteger a Jesús. Lo que no hizo fue anular la voluntad de Herodes.',
+        cita: '«Levántate, toma al niño y a su madre, y huye a Egipto. Quédate allí hasta que yo te avise, porque Herodes va a buscar al niño para matarlo.»\n— Mateo 2:13',
+      },
+      {
+        titulo: 'El libre albedrío: Herodes eligió matar',
+        texto:
+          'Dios no hizo a Herodes matar niños — Herodes lo decidió por miedo y orgullo. Históricamente era un tirano conocido: asesinó a su propia esposa, a tres de sus hijos y a cientos de rivales políticos. Este crimen es completamente coherente con quien era. El mal en este relato no viene de Dios — viene de la voluntad de un hombre.',
+        cita: '«Al darse cuenta Herodes de que aquellos sabios lo habían engañado, se llenó de ira y mandó matar a todos los niños de dos años para abajo que vivían en Belén y sus alrededores.»\n— Mateo 2:16',
+      },
+      {
+        titulo: 'La profecía no termina en el llanto',
+        texto:
+          'Mateo cita a Jeremías: "Era Raquel, que lloraba por sus hijos y no quería ser consolada." Pero eso es solo la mitad de la profecía. En el mismo capítulo de Jeremías, Dios le responde a Raquel inmediatamente después: no termina en el llanto, termina en esperanza.',
+        cita: '«Raquel, no llores más; ya no derrames tus lágrimas, pues tus penas tendrán su recompensa... Hay una esperanza para tu futuro.»\n— Jeremías 31:16-17',
+      },
+      {
+        titulo: 'Las almas de los inocentes están en manos de Dios',
+        texto:
+          'El libro de la Sabiduría — parte del canon bíblico católico — habla directamente de los que mueren siendo inocentes. No perecieron: fueron recibidos por Dios. La Iglesia Católica honra a estos niños el 28 de diciembre como los Santos Inocentes, los primeros mártires, que murieron a causa de Cristo sin haberlo conocido.',
+        cita: '«Las almas de los buenos están en las manos de Dios, y el tormento no las alcanzará... Dios los puso a prueba y los halló dignos de él. Los probó como al oro en el crisol, y los aceptó como un sacrificio ofrecido en el altar.»\n— Sabiduría 3:1-6',
+      },
+      {
+        titulo: 'Dios no es el autor del mal, pero puede transformarlo',
+        texto:
+          'La muerte de esos niños no fue planeada por Dios — fue cometida por Herodes. Pero Dios tiene la capacidad de sacar bien incluso del peor mal humano. Esos niños son hoy santos. Sus madres serán consoladas. Y el Mesías que Herodes quería eliminar creció para salvar al mundo.',
+        cita: '«Sabemos que Dios dispone todas las cosas para el bien de quienes lo aman, a los cuales él ha llamado de acuerdo con su propósito.»\n— Romanos 8:28',
+      },
+    ],
+    conclusion:
+      'Dios no mandó matar a los niños de Belén — Herodes lo hizo por miedo y orgullo. Dios actuó antes del crimen protegiendo a Jesús. Los niños asesinados, inocentes y puros, están en manos de Dios según el libro de la Sabiduría. La profecía de Jeremías que Mateo cita no termina en el llanto — termina en esperanza. Y Romanos 8:28 nos recuerda que Dios no es el autor del mal, pero sí es capaz de transformarlo.',
+    mensaje:
+      'Las madres de Belén lloraron, y Dios lloró con ellas. No existe en la Biblia un Dios indiferente al sufrimiento de los inocentes. Pero esos niños no murieron en vano ni en el olvido — la Iglesia los llama santos. Y el mismo Jesús que sobrevivió gracias a la huida a Egipto creció para decir: "Dejen que los niños vengan a mí." Nunca fue indiferente a ellos.',
+  },
 ]
 
 function buildTexto(p: Pregunta): string {
