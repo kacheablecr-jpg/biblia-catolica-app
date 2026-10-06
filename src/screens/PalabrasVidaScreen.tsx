@@ -2,13 +2,16 @@ import React, { useEffect, useMemo, useState } from 'react'
 import {
   View, Text, FlatList, TouchableOpacity, StyleSheet, StatusBar, TextInput, ActivityIndicator,
 } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useRoute } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { PALABRAS_VIDA, PalabraVida, numero } from '../data/palabrasVida'
+import { numero } from '../data/palabrasVida'
+import { ClaveSeccion, FichaLista, SECCIONES } from '../data/secciones'
 import { buscarEnBiblia, limpiarTermino, normalizar, ResultadoBusqueda } from '../data/buscarPalabra'
 
 const C = { fondo: '#0f172a', card: '#1e293b', texto: '#f1f5f9', subTexto: '#94a3b8', acento: '#f472b6', borde: '#334155' }
-const MAXIMO = PALABRAS_VIDA[0].veces
+
+/** Un renglón de la lista: una ficha o el encabezado de un nombre compartido */
+type Fila = FichaLista | { id: string; encabezado: string; cuantos: number }
 
 /** Mínimo de letras para buscar en toda la Biblia (con menos, casi todo calza) */
 const MINIMO_BUSQUEDA = 3
@@ -16,24 +19,43 @@ const MINIMO_BUSQUEDA = 3
 const ESPERA_MS = 450
 
 /**
- * Las 100 palabras que más se repiten en la Biblia, de la más a la menos repetida.
- * El buscador filtra las 100 y, si lo escrito no es una de ellas, lo busca solo en toda la Biblia.
+ * Lista de una sección ("Palabras de vida" o "Personajes de la Biblia"), de lo más a lo menos repetido.
+ * El buscador filtra la lista y, si lo escrito no está en ella, lo busca solo en toda la Biblia.
  */
 export default function PalabrasVidaScreen() {
   const nav = useNavigation<any>()
+  const route = useRoute<any>()
   const insets = useSafeAreaInsets()
   const [busqueda, setBusqueda] = useState('')
+  const [soloCompartidos, setSoloCompartidos] = useState(false)
+  const seccion = SECCIONES[(route.params?.seccion ?? 'palabras') as ClaveSeccion]
+  const maximo = seccion.fichas[0].veces
+  const total = seccion.fichas.length
 
   const termino = limpiarTermino(busqueda)
-  // Calza con el nombre de la palabra o con alguna de sus formas (buscar "amado" encuentra "Amor")
+  // Calza con el título o con alguna de sus formas (buscar "amado" encuentra "Amor")
   const palabras = useMemo(() => (
     termino
-      ? PALABRAS_VIDA.filter(p => normalizar(p.palabra).includes(termino) || p.formas.some(f => normalizar(f) === termino))
-      : PALABRAS_VIDA
-  ), [termino])
-  const yaEstaEntreLas100 = palabras.some(p => normalizar(p.palabra) === termino)
-  const puedeBuscar = termino.length >= MINIMO_BUSQUEDA && !yaEstaEntreLas100
-  const buscarEnTodaLaBiblia = () => nav.navigate('PalabraDetalle', { termino: busqueda.trim() })
+      ? seccion.fichas.filter(p => normalizar(p.titulo).includes(termino) || p.formas.some(f => normalizar(f) === termino))
+      : seccion.fichas
+  ), [termino, seccion])
+  // Nombres que llevan varias personas: se muestran juntos, cada nombre con quién es quién
+  const hayCompartidos = seccion.fichas.some(p => p.grupo)
+  const compartidos = useMemo(() => {
+    const filas: Fila[] = []
+    const nombres = [...new Set(seccion.fichas.filter(p => p.grupo).map(p => p.grupo!))].sort((a, b) => a.localeCompare(b, 'es'))
+    for (const nombre of nombres) {
+      const personas = seccion.fichas.filter(p => p.grupo === nombre)
+      filas.push({ id: `grupo-${nombre}`, encabezado: nombre, cuantos: personas.length }, ...personas)
+    }
+    return filas
+  }, [seccion])
+  const mostrandoCompartidos = soloCompartidos && !termino
+  const filas: Fila[] = mostrandoCompartidos ? compartidos : palabras
+
+  const yaEstaEnLaLista = palabras.some(p => normalizar(p.titulo) === termino)
+  const puedeBuscar = termino.length >= MINIMO_BUSQUEDA && !yaEstaEnLaLista
+  const buscarEnTodaLaBiblia = () => nav.navigate('PalabraDetalle', { seccion: seccion.clave, termino: busqueda.trim() })
 
   // Resultado de buscar lo escrito en toda la Biblia (null = todavía buscando)
   const [resultado, setResultado] = useState<{ termino: string; datos: ResultadoBusqueda } | null>(null)
@@ -49,16 +71,19 @@ export default function PalabrasVidaScreen() {
   }, [termino, puedeBuscar])
   const encontrado = resultado?.termino === termino ? resultado.datos : null
 
-  const renderPalabra = ({ item }: { item: PalabraVida }) => (
-    <TouchableOpacity style={s.card} onPress={() => nav.navigate('PalabraDetalle', { id: item.id })} activeOpacity={0.8}>
+  const renderPalabra = ({ item }: { item: Fila }) => 'encabezado' in item ? (
+    <Text style={s.grupo}>{item.encabezado} · {item.cuantos} personas</Text>
+  ) : (
+    <TouchableOpacity style={s.card} onPress={() => nav.navigate('PalabraDetalle', { seccion: seccion.clave, id: item.id })} activeOpacity={0.8}>
       <View style={s.puestoBox}>
         <Text style={s.puestoTxt}>{item.puesto}</Text>
       </View>
       <View style={{ flex: 1 }}>
-        <Text style={s.palabra}>{item.palabra}</Text>
-        <Text style={s.cuenta}>{numero(item.veces)} veces · {numero(item.versiculos)} versículos</Text>
+        <Text style={s.palabra}>{item.titulo}</Text>
+        {!!item.subtitulo && <Text style={s.quien}>{item.subtitulo}</Text>}
+        <Text style={s.cuenta}>{numero(item.veces)} {item.veces === 1 ? 'vez' : 'veces'} · {numero(item.versiculos)} {item.versiculos === 1 ? 'versículo' : 'versículos'}</Text>
         <View style={s.barraFondo}>
-          <View style={[s.barra, { width: `${Math.max(3, Math.sqrt(item.veces / MAXIMO) * 100)}%` }]} />
+          <View style={[s.barra, { width: `${Math.max(3, Math.sqrt(item.veces / maximo) * 100)}%` }]} />
         </View>
       </View>
       <Text style={s.flecha}>›</Text>
@@ -69,7 +94,7 @@ export default function PalabrasVidaScreen() {
     <View style={s.container}>
       <StatusBar barStyle="light-content" backgroundColor={C.fondo} />
       <FlatList
-        data={palabras}
+        data={filas}
         keyExtractor={p => p.id}
         renderItem={renderPalabra}
         contentContainerStyle={[s.lista, { paddingBottom: insets.bottom + 16 }]}
@@ -79,21 +104,28 @@ export default function PalabrasVidaScreen() {
             <TouchableOpacity onPress={() => nav.goBack()} style={s.backBtn}>
               <Text style={s.backTxt}>‹ Inicio</Text>
             </TouchableOpacity>
-            <Text style={s.emoji}>💬</Text>
-            <Text style={s.titulo}>Palabras de vida</Text>
-            <Text style={s.subtitulo}>
-              Las 100 palabras con mensaje para la vida que más se repiten en la Biblia, de la más a la menos repetida.
-              Toque una para ver qué significa, qué nos dice hoy y dónde aparece.
-            </Text>
+            <Text style={s.emoji}>{seccion.emoji}</Text>
+            <Text style={s.titulo}>{seccion.titulo}</Text>
+            <Text style={s.subtitulo}>{seccion.intro}</Text>
             <TextInput
               style={s.buscar}
-              placeholder="Escriba cualquier palabra o frase..."
+              placeholder={seccion.placeholder}
               placeholderTextColor={C.subTexto}
               value={busqueda}
               onChangeText={setBusqueda}
               returnKeyType="search"
               onSubmitEditing={() => { if (puedeBuscar) buscarEnTodaLaBiblia() }}
             />
+            {hayCompartidos && !termino && (
+              <TouchableOpacity style={[s.filtro, soloCompartidos && s.filtroActivo]} onPress={() => setSoloCompartidos(v => !v)} activeOpacity={0.8}>
+                <Text style={[s.filtroTxt, soloCompartidos && s.filtroTxtActivo]}>
+                  {soloCompartidos ? '✓  Nombres que comparten varias personas' : 'Nombres que comparten varias personas  ›'}
+                </Text>
+                <Text style={s.cuenta}>
+                  {soloCompartidos ? 'Toque otra vez para volver a la lista completa.' : 'José, Juan, María, Judas… y quién es quién.'}
+                </Text>
+              </TouchableOpacity>
+            )}
             {puedeBuscar && (
               !encontrado ? (
                 <View style={s.buscarBiblia}>
@@ -105,7 +137,7 @@ export default function PalabrasVidaScreen() {
                   <Text style={s.buscarBibliaIcono}>🔎</Text>
                   <View style={{ flex: 1 }}>
                     <Text style={s.buscarBibliaTitulo}>«{busqueda.trim()}» no aparece en la Biblia</Text>
-                    <Text style={s.cuenta}>No está entre las 100 ni en el resto del texto. Pruebe con otra forma de la palabra.</Text>
+                    <Text style={s.cuenta}>No está en esta lista de {total} ni en el resto del texto. Pruebe escribirlo de otra forma.</Text>
                   </View>
                 </View>
               ) : (
@@ -118,7 +150,7 @@ export default function PalabrasVidaScreen() {
                     <Text style={s.cuenta}>
                       {numero(encontrado.veces)} {encontrado.veces === 1 ? 'vez' : 'veces'} · {numero(encontrado.versiculos)} {encontrado.versiculos === 1 ? 'versículo' : 'versículos'} · {encontrado.libros} {encontrado.libros === 1 ? 'libro' : 'libros'}
                     </Text>
-                    <Text style={s.cuenta}>No está entre las 100: se buscó en toda la Biblia. Toque para ver dónde aparece.</Text>
+                    <Text style={s.cuenta}>No está en esta lista de {total}: se buscó en toda la Biblia. Toque para ver dónde aparece.</Text>
                   </View>
                   <Text style={s.flecha}>›</Text>
                 </TouchableOpacity>
@@ -145,6 +177,12 @@ const s = StyleSheet.create({
   puestoBox:  { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center', backgroundColor: C.acento + '26' },
   puestoTxt:  { color: C.acento, fontWeight: '700', fontSize: 15 },
   palabra:    { color: C.texto, fontSize: 17, fontWeight: '700' },
+  quien:      { color: C.acento, fontSize: 13, marginTop: 1 },
+  grupo:      { color: C.texto, fontSize: 18, fontWeight: '800', marginTop: 14 },
+  filtro:          { marginTop: 10, backgroundColor: C.card, borderRadius: 12, padding: 12, borderWidth: 1, borderColor: C.borde },
+  filtroActivo:    { borderColor: C.acento, backgroundColor: C.acento + '1f' },
+  filtroTxt:       { color: C.texto, fontSize: 15, fontWeight: '700' },
+  filtroTxtActivo: { color: C.acento },
   cuenta:     { color: C.subTexto, fontSize: 13, marginTop: 2 },
   barraFondo: { height: 4, borderRadius: 2, backgroundColor: C.borde, marginTop: 8, overflow: 'hidden' },
   barra:      { height: 4, borderRadius: 2, backgroundColor: C.acento },

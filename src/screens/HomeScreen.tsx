@@ -13,7 +13,7 @@ const COLORES = { fondo: '#0f172a', card: '#1e293b', texto: '#f1f5f9', subTexto:
 const BASE_URL = 'https://pos-one-backend.onrender.com/api/biblia-app'
 const PAGINA_URL = 'https://pos-one-backend.onrender.com/biblia'
 const INSTALL_KEY = 'biblia_install_registered'
-const CURRENT_VERSION = 'v2.11.0'
+const CURRENT_VERSION = 'v2.12.0'
 const GITHUB_RELEASES_API = 'https://api.github.com/repos/kacheablecr-jpg/biblia-catolica-app/releases/latest'
 const DOWNLOAD_URL = 'https://github.com/kacheablecr-jpg/biblia-catolica-app/releases/latest/download/palabra-viva.apk'
 
@@ -284,6 +284,16 @@ export default function HomeScreen() {
               <Text style={s.rutaBtnFlecha}>›</Text>
             </TouchableOpacity>
 
+            {/* Personajes de la Biblia */}
+            <TouchableOpacity style={s.personajesBtn} onPress={() => nav.navigate('Personajes')} activeOpacity={0.8}>
+              <Text style={s.rutaBtnIcon}>👥</Text>
+              <View style={{ flex: 1 }}>
+                <Text style={s.personajesBtnTitulo}>Personajes de la Biblia</Text>
+                <Text style={s.personajesBtnSub}>Quién fue cada uno, qué nos enseña y dónde aparece</Text>
+              </View>
+              <Text style={s.rutaBtnFlecha}>›</Text>
+            </TouchableOpacity>
+
             {/* Búsqueda */}
             <View style={s.searchBox}>
               <TextInput
@@ -356,6 +366,9 @@ const s = StyleSheet.create({
   palabrasBtn:          { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#2a1626', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#9d174d' },
   palabrasBtnTitulo:    { color: '#fce7f3', fontWeight: '700', fontSize: 15 },
   palabrasBtnSub:       { color: '#f472b6', fontSize: 12, marginTop: 2 },
+  personajesBtn:        { marginHorizontal: 16, marginBottom: 16, backgroundColor: '#0c2333', borderRadius: 16, padding: 16, flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: '#0e7490' },
+  personajesBtnTitulo:  { color: '#cffafe', fontWeight: '700', fontSize: 15 },
+  personajesBtnSub:     { color: '#22d3ee', fontSize: 12, marginTop: 2 },
   acercaBtn:       { marginHorizontal: 16, marginTop: 20, marginBottom: 8, paddingVertical: 14, alignItems: 'center', borderTopWidth: 1, borderColor: COLORES.borde },
   acercaTxt:       { color: COLORES.subTexto, fontSize: 13 },
   emocionBtnTitulo:{ color: '#99f6e4', fontWeight: '700', fontSize: 15 },

@@ -37,6 +37,7 @@ export default function App() {
         <Stack.Screen name="Mandamientos"    component={MandamientosScreen} />
         <Stack.Screen name="EvangelioDiario" component={EvangelioDiarioScreen} />
         <Stack.Screen name="PalabrasVida"    component={PalabrasVidaScreen} />
+        <Stack.Screen name="Personajes"      component={PalabrasVidaScreen} initialParams={{ seccion: 'personajes' }} />
         <Stack.Screen name="PalabraDetalle"  component={PalabraDetalleScreen} />
       </Stack.Navigator>
     </NavigationContainer>

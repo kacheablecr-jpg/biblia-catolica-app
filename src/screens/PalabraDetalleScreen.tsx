@@ -5,7 +5,8 @@ import {
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { getLibros, Libro } from '../db/database'
-import { PALABRAS_VIDA, leerCita, numero } from '../data/palabrasVida'
+import { leerCita, numero } from '../data/palabrasVida'
+import { ClaveSeccion, SECCIONES } from '../data/secciones'
 import { buscarEnBiblia, limpiarTermino, ModoBusqueda, VersiculoDestacado } from '../data/buscarPalabra'
 
 const C = { fondo: '#0f172a', card: '#1e293b', texto: '#f1f5f9', subTexto: '#94a3b8', acento: '#f472b6', borde: '#334155' }
@@ -13,10 +14,12 @@ const C = { fondo: '#0f172a', card: '#1e293b', texto: '#f1f5f9', subTexto: '#94a
 interface CapituloCitas { capitulo: number; versiculos: number[] }
 interface LibroCitas { libroId: number; total: number; capitulos: CapituloCitas[] }
 
-/** Lo que se muestra de una palabra, venga de las 100 o de una búsqueda en toda la Biblia */
+/** Lo que se muestra de una palabra o un personaje, venga de la lista o de una búsqueda en toda la Biblia */
 interface Ficha {
   palabra: string
-  /** Solo las 100 palabras tienen puesto, significado y mensaje */
+  /** Solo personajes: quién es, para distinguir a los que comparten nombre */
+  subtitulo?: string
+  /** Solo lo que está en la lista tiene puesto y sus dos textos (significado y mensaje / quién fue y qué enseña) */
   puesto?: number
   significado?: string
   mensaje?: string
@@ -36,15 +39,19 @@ const MODOS: { modo: ModoBusqueda; titulo: string }[] = [
 ]
 
 /**
- * Significado, mensaje y todas las citas de una palabra, agrupadas por libro y capítulo.
- * Con `id` muestra una de las 100 palabras; con `termino` busca esa palabra o frase en toda la Biblia.
+ * Los dos textos y todas las citas de una palabra o un personaje, agrupadas por libro y capítulo.
+ * Con `id` muestra una ficha de la lista de la sección; con `termino` busca eso en toda la Biblia.
  */
 export default function PalabraDetalleScreen() {
   const nav = useNavigation<any>()
   const route = useRoute<any>()
   const insets = useSafeAreaInsets()
   const termino: string | undefined = route.params.termino
-  const predefinida = useMemo(() => PALABRAS_VIDA.find(p => p.id === route.params.id), [route.params.id])
+  const seccion = SECCIONES[(route.params.seccion ?? 'palabras') as ClaveSeccion]
+  const predefinida = useMemo<Ficha | undefined>(() => {
+    const f = seccion.fichas.find(p => p.id === route.params.id)
+    return f && { ...f, palabra: f.titulo, significado: f.texto1, mensaje: f.texto2 }
+  }, [seccion, route.params.id])
 
   const [modo, setModo] = useState<ModoBusqueda>('exacta')
   const [buscada, setBuscada] = useState<Ficha | null>(null)
@@ -132,10 +139,11 @@ export default function PalabraDetalleScreen() {
   const encabezado = (
     <View style={{ paddingTop: insets.top + 16 }}>
       <TouchableOpacity onPress={() => nav.goBack()} style={s.backBtn}>
-        <Text style={s.backTxt}>‹ Palabras de vida</Text>
+        <Text style={s.backTxt}>‹ {seccion.titulo}</Text>
       </TouchableOpacity>
-      <Text style={s.puesto}>{ficha?.puesto ? `N.º ${ficha.puesto} de 100` : 'Búsqueda en toda la Biblia'}</Text>
+      <Text style={s.puesto}>{ficha?.puesto ? `N.º ${ficha.puesto} de ${seccion.fichas.length}` : 'Búsqueda en toda la Biblia'}</Text>
       <Text style={s.titulo}>{ficha?.palabra ?? termino}</Text>
+      {!!ficha?.subtitulo && <Text style={s.quien}>{ficha.subtitulo}</Text>}
 
       {termino && !esFrase && (
         <View style={s.modos}>
@@ -155,7 +163,7 @@ export default function PalabraDetalleScreen() {
       ) : ficha.veces === 0 ? (
         <View style={s.bloque}>
           <Text style={s.bloqueTxt}>
-            No aparece en esta Biblia (Dios Habla Hoy). Pruebe con otra forma de la palabra
+            No aparece en esta Biblia (Dios Habla Hoy). Pruebe escribirlo de otra forma
             {esFrase ? ' o con menos palabras' : ' o con "Que la contenga"'}.
           </Text>
         </View>
@@ -178,11 +186,11 @@ export default function PalabraDetalleScreen() {
 
           {ficha.significado ? (
             <>
-              <Text style={s.seccion}>📖  Qué significa</Text>
+              <Text style={s.seccion}>{seccion.etiquetaTexto1}</Text>
               <View style={s.bloque}>
                 <Text style={s.bloqueTxt}>{ficha.significado}</Text>
               </View>
-              <Text style={s.seccion}>💬  Mensaje para hoy</Text>
+              <Text style={s.seccion}>{seccion.etiquetaTexto2}</Text>
               <View style={[s.bloque, s.bloqueMensaje]}>
                 <Text style={s.bloqueTxt}>{ficha.mensaje}</Text>
               </View>
@@ -198,7 +206,7 @@ export default function PalabraDetalleScreen() {
                 </TouchableOpacity>
               ))}
               <Text style={s.nota}>
-                Esta palabra no está entre las 100 que traen significado y mensaje: aquí se muestra tal como aparece en la Biblia.
+                No está en la lista de {seccion.titulo.toLowerCase()}: aquí se muestra tal como aparece en la Biblia.
               </Text>
             </>
           )}
@@ -210,8 +218,8 @@ export default function PalabraDetalleScreen() {
           <Text style={s.seccion}>📍  Dónde aparece</Text>
           <Text style={s.nota}>
             Donde más aparece es en <Text style={s.negrita}>{ficha.libroTop}</Text> ({numero(ficha.versiculosLibroTop)} {ficha.versiculosLibroTop === 1 ? 'versículo' : 'versículos'}).
-            {ficha.puesto
-              ? ` Se cuentan la palabra y las de su misma raíz: ${ficha.formas.join(', ')}…`
+            {predefinida
+              ? seccion.comoSeConto(seccion.fichas.find(p => p.id === route.params.id)!)
               : ficha.formas.length > 1 ? ` Formas encontradas: ${ficha.formas.join(', ')}…` : ''}
           </Text>
           <Text style={s.nota}>Toque un libro para ver sus capítulos y versículos, y un versículo para leerlo.</Text>
@@ -241,6 +249,7 @@ const s = StyleSheet.create({
   backTxt:       { color: C.acento, fontSize: 16 },
   puesto:        { color: C.acento, fontSize: 13, fontWeight: '700', marginTop: 6 },
   titulo:        { fontSize: 32, fontWeight: '800', color: C.texto },
+  quien:         { color: C.acento, fontSize: 16, fontWeight: '600', marginTop: 2 },
   modos:         { flexDirection: 'row', gap: 8, marginTop: 12 },
   modo:          { flex: 1, paddingVertical: 9, borderRadius: 10, alignItems: 'center', borderWidth: 1, borderColor: C.borde, backgroundColor: C.card },
   modoActivo:    { borderColor: C.acento, backgroundColor: C.acento + '26' },

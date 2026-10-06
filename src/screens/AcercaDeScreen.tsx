@@ -69,6 +69,7 @@ export default function AcercaDeScreen() {
             ['16', 'rutas temáticas'],
             ['21', 'guías por estado emocional'],
             ['100', 'palabras de vida con su significado'],
+            ['136', 'personajes: quién fue cada uno'],
           ].map(([num, desc]) => (
             <View key={num + desc} style={s.statRow}>
               <Text style={s.statNum}>{num}</Text>
