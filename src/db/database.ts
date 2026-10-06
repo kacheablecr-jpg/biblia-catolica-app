@@ -87,3 +87,18 @@ export async function buscarVersiculos(query: string): Promise<(Versiculo & { li
     [`%${query}%`]
   )
 }
+
+export interface VersiculoPlano { libro_id: number; capitulo: number; versiculo: number; texto: string }
+
+let todosLosVersiculos: VersiculoPlano[] | null = null
+
+/** Toda la Biblia en memoria (se lee una sola vez): la usa el buscador de palabras */
+export async function getTodosLosVersiculos(): Promise<VersiculoPlano[]> {
+  if (todosLosVersiculos) return todosLosVersiculos
+  const db = await getDb()
+  todosLosVersiculos = await db.getAllAsync<VersiculoPlano>(
+    `SELECT libro_id, capitulo, versiculo, texto FROM versiculos
+     ORDER BY libro_id, capitulo, versiculo`
+  )
+  return todosLosVersiculos
+}

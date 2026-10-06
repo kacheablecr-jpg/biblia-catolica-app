@@ -13,7 +13,7 @@ const COLORES = { fondo: '#0f172a', card: '#1e293b', texto: '#f1f5f9', subTexto:
 const BASE_URL = 'https://pos-one-backend.onrender.com/api/biblia-app'
 const PAGINA_URL = 'https://pos-one-backend.onrender.com/biblia'
 const INSTALL_KEY = 'biblia_install_registered'
-const CURRENT_VERSION = 'v2.10.0'
+const CURRENT_VERSION = 'v2.11.0'
 const GITHUB_RELEASES_API = 'https://api.github.com/repos/kacheablecr-jpg/biblia-catolica-app/releases/latest'
 const DOWNLOAD_URL = 'https://github.com/kacheablecr-jpg/biblia-catolica-app/releases/latest/download/palabra-viva.apk'
 
@@ -279,7 +279,7 @@ export default function HomeScreen() {
               <Text style={s.rutaBtnIcon}>💬</Text>
               <View style={{ flex: 1 }}>
                 <Text style={s.palabrasBtnTitulo}>Palabras de vida</Text>
-                <Text style={s.palabrasBtnSub}>Las 100 más repetidas: qué significan y dónde aparecen</Text>
+                <Text style={s.palabrasBtnSub}>Las 100 más repetidas y un buscador de cualquier palabra</Text>
               </View>
               <Text style={s.rutaBtnFlecha}>›</Text>
             </TouchableOpacity>
